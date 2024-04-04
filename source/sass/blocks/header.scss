@@ -21,7 +21,6 @@
     }
     
     &__nav {
-        display: flex;
         
         @media (max-width: 767px) {
             display: none;
@@ -36,9 +35,7 @@
         }
         
         @media (min-width: 1728px) {
-            a {
-                padding: 10px 18px;
-            }
+            padding: 10px 18px;
         }
     }
     
@@ -54,13 +51,13 @@
     }
     
     &__burger {
-        @media (min-width: 768px) {
-            display: none;
-        }
-        
         @include clear-button;
         
         margin-left: 28px;
+        
+        @media (min-width: 768px) {
+            display: none;
+        }
     }
     
     &__logo {
