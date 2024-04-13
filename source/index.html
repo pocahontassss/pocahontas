@@ -14,7 +14,11 @@
           <img src="img/logo.svg" alt="Логотип">
         </a>
         
-        <nav class="header__nav" >
+        <nav class="header__nav header__nav--showed" >
+          <button class="header__closed">
+            <img src="img/close_icon.svg" alt="Закрыть меню">
+          </button>
+          
           <ul class="header__menu">
             <li class="header__item">
               <a>Главная</a>
@@ -26,6 +30,23 @@
               <a href="#">Контакты</a>
             </li>
           </ul>
+        
+          <div class="header__contacts">
+            <p class="header__social-description">Следи за нами<br>в социальных сетях:</p>
+            
+            <ul class="header__social social">
+              <li class="social__item">
+                <a href="#">
+                  <img src="img/tg_icon.svg" alt="tg.com" width="21px" height="18px">
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#">
+                  <img src="img/vk_icon.svg" alt="vk.com" width="24px" height="16px">
+                </a>
+              </li>
+            </ul>
+          </div>
         </nav>
         
         <div class="header__interaction">
@@ -33,6 +54,7 @@
             <img src="img/find_icon.svg" alt="Поиск">
           </button>
           <button class="header__button">
+            <span class="header__number-basket">0</span>
             <img src="img/shop_icon.svg" alt="Корзина">
           </button>
         </div>
