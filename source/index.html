@@ -15,6 +15,10 @@
         </a>
         
         <nav class="header__nav" >
+          <button class="header__closed">
+            <img src="img/close_icon.svg" alt="Закрыть меню">
+          </button>
+          
           <ul class="header__menu">
             <li class="header__item">
               <a>Главная</a>
@@ -26,6 +30,23 @@
               <a href="#">Контакты</a>
             </li>
           </ul>
+        
+          <div class="header__contacts">
+            <p class="header__social-description">Следи за нами<br>в социальных сетях:</p>
+            
+            <ul class="header__social social">
+              <li class="social__item">
+                <a href="#">
+                  <img src="img/tg_icon.svg" alt="tg.com" width="21px" height="18px">
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#">
+                  <img src="img/vk_icon.svg" alt="vk.com" width="24px" height="16px">
+                </a>
+              </li>
+            </ul>
+          </div>
         </nav>
         
         <div class="header__interaction">
@@ -33,6 +54,7 @@
             <img src="img/find_icon.svg" alt="Поиск">
           </button>
           <button class="header__button">
+            <span class="header__number-basket">5</span>
             <img src="img/shop_icon.svg" alt="Корзина">
           </button>
         </div>
@@ -42,5 +64,29 @@
         </button>
       </div>
     </header>
+    
+    <main class="hero">
+      <div class="hero__container container">
+        <div class="hero__caption">
+          <div class="hero__title-wrapper">
+            <h1 class="hero__title">
+              <span class="hero__title-text hero__title-text--first">Найди Свои</span>
+              <span class="hero__title-text hero__title-text--second">Идеальные</span>
+              <span class="hero__title-text hero__title-text--third">Кроссы</span>
+            </h1>
+          </div>
+          <p class="hero__subtitle">
+            Какой-то супер-мотивирующий текст<br>чтоб купили прям вообще всё
+          </p>
+          <button class="hero__button button">За Покупками</button>
+        </div>
+        
+        <div class="hero__product">
+          <img class="hero__product-image" src="img/white-snakes-preview.png" alt="Белые Кроссовки">
+          <h2 class="hero__product-name">Trendy Slick Pro</h2>
+          <span class="hero__product-price">3999 ₽</span>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
