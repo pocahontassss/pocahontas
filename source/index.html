@@ -15,7 +15,7 @@
         </a>
         
         <nav class="header__nav" >
-          <button class="header__closed">
+          <button type="button" class="header__closed">
             <img src="img/close_icon.svg" alt="Закрыть меню">
           </button>
           
@@ -50,16 +50,16 @@
         </nav>
         
         <div class="header__interaction">
-          <button class="header__button">
+          <button type="button" class="header__button">
             <img src="img/find_icon.svg" alt="Поиск">
           </button>
-          <button class="header__button">
+          <button type="button" class="header__button">
             <span class="header__number-basket">5</span>
             <img src="img/shop_icon.svg" alt="Корзина">
           </button>
         </div>
         
-        <button class="header__burger">
+        <button type="button" class="header__burger">
           <img src="img/menu_icon.svg" alt="Меню">
         </button>
       </div>
@@ -78,7 +78,7 @@
           <p class="hero__subtitle">
             Какой-то супер-мотивирующий текст<br>чтоб купили прям вообще всё
           </p>
-          <button class="hero__button button">За Покупками</button>
+          <button type="button" class="hero__button button">За Покупками</button>
         </div>
         
         <div class="hero__product">
@@ -126,8 +126,8 @@
         <h2 class="best-selling__title">Best Selling</h2>
         
         <div class="best-selling__gender-swap">
-          <button class="best-selling__gender-swap--man button">Мужские</button>
-          <button class="best-selling__gender-swap--woman button">Женские</button>
+          <button type="button" class="best-selling__gender-swap--man button">Мужские</button>
+          <button type="button" class="best-selling__gender-swap--woman button">Женские</button>
         </div>
         
         <div class="best-selling__product-wrapper">
@@ -139,7 +139,7 @@
               <div class="product-card__price-wrapper">
                 <span class="product-card__price">2999 ₽</span>
                 <span class="product-card__old-price"><s>4999 ₽</s></span>
-                <button class="product-card__arrow-icon button"></button>
+                <button type="button" class="product-card__arrow-icon button"></button>
               </div>
             </div>
           </div>
@@ -151,7 +151,7 @@
               <div class="product-card__price-wrapper">
                 <span class="product-card__price">2999 ₽</span>
                 <span class="product-card__old-price"><s>3999 ₽</s></span>
-                <button class="product-card__arrow-icon button"></button>
+                <button type="button" class="product-card__arrow-icon button"></button>
               </div>
             </div>
           </div>
@@ -163,13 +163,49 @@
               <div class="product-card__price-wrapper">
                 <span class="product-card__price">2999 ₽</span>
                 <span class="product-card__old-price"><s>3999 ₽</s></span>
-                <button class="product-card__arrow-icon button"></button>
+                <button type="button" class="product-card__arrow-icon button"></button>
               </div>
             </div>
           </div>
           
         </div>
-        <button class="best-selling__show-all button">Показать Все</button>
+        <button type="button" class="best-selling__show-all button">Показать Все</button>
+      </div>
+    </section>
+    
+    <section class="reviews">
+      <div class="reviews__container container">
+        <h2 class="reviews__title">Отзывы <span>О Кроссах</span></h2>
+        <div class="reviews__wrapper">
+          <ul class="reviews__list">
+            
+            <li class="reviews__item">
+              <img class="reviews__avatar" src="img/reviews_ava-joshi.png" alt="Photo Ava Joshi">
+              <h3 class="reviews__name">Ava Joshi</h3>
+              <div class="reviews__rating">
+                <div class="reviews__rating-star"></div>
+                <div class="reviews__rating-star"></div>
+                <div class="reviews__rating-star"></div>
+                <div class="reviews__rating-star"></div>
+                <div class="reviews__rating-star reviews__rating-star--half"></div>
+              </div>
+              <p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </li>
+            
+            <li class="reviews__item">
+              <img class="reviews__avatar" src="img/reviews_otis-bisnoy.png" alt="Photo Otis Bisnoy">
+              <h3 class="reviews__name">Otis Bisnoy</h3>
+              <div class="reviews__rating">
+                <div class="reviews__rating-star"></div>
+                <div class="reviews__rating-star"></div>
+                <div class="reviews__rating-star"></div>
+                <div class="reviews__rating-star reviews__rating-star--half"></div>
+              </div>
+              <p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </li>
+            
+          </ul>
+        </div>
       </div>
     </section>
   </body>
