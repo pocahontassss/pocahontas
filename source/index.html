@@ -65,6 +65,8 @@
       </div>
     </header>
     
+    
+    
     <section class="hero">
       <div class="hero__container container">
         <div class="hero__caption">
@@ -78,7 +80,7 @@
           <p class="hero__subtitle">
             Какой-то супер-мотивирующий текст<br>чтоб купили прям вообще всё
           </p>
-          <button type="button" class="hero__button button">За Покупками</button>
+          <a href="#" class="hero__button">За Покупками</a>
         </div>
         
         <div class="hero__product">
@@ -89,29 +91,59 @@
       </div>
     </section>
     
-    <div class="external-links">
-      <div class="external-links__row-container">
-        <ul class="external-links__list">
+    
+    
+    <section class="marketplace">
+      <div class="marketplace__row-container">
+        <ul class="marketplace__list">
           
-          <li class="external-links__item">
+          <li class="marketplace__item">
             <a href="#">
               <img src="img/ozon.svg" alt="Ozon">
             </a>
           </li>
           
-          <li class="external-links__item">
+          <li class="marketplace__item">
             <a href="#">
               <img src="img/wildberries.svg" alt="Wildberries">
             </a>
           </li>
           
-          <li class="external-links__item">
+          <li class="marketplace__item">
             <a href="#">
               <img src="img/sbermarket.svg" alt="Sbermarket">
             </a>
           </li>
           
-          <li class="external-links__item">
+          <li class="marketplace__item">
+            <a href="#">
+              <img src="img/yandex-market.svg" alt="Yandex-market">
+            </a>
+          </li>
+
+        </ul>
+        
+        <ul class="marketplace__list-anim">
+          
+          <li class="marketplace__item">
+            <a href="#">
+              <img src="img/ozon.svg" alt="Ozon">
+            </a>
+          </li>
+          
+          <li class="marketplace__item">
+            <a href="#">
+              <img src="img/wildberries.svg" alt="Wildberries">
+            </a>
+          </li>
+          
+          <li class="marketplace__item">
+            <a href="#">
+              <img src="img/sbermarket.svg" alt="Sbermarket">
+            </a>
+          </li>
+          
+          <li class="marketplace__item">
             <a href="#">
               <img src="img/yandex-market.svg" alt="Yandex-market">
             </a>
@@ -119,7 +151,164 @@
           
         </ul>
       </div>
-    </div>
+    </section>
+    
+    
+    
+    <section class="popular">
+      <div class="popular__container container">
+        <div class="popular__wrapper-title">
+          <h2 class="popular__title">Сегодня в тренде</h2>
+          <span class="popular__text">Самые</span>
+          <span class="popular__text">Популярные</span>
+          <p class="popular__description">Посмотрите, что чаще всего покупают у нас</p>
+          <a href="#" class="popular__show-all popular__show-all--tablet show-all">Показать Все</a>
+        </div>
+        <div class="popular__slider-box">
+          <ul class="popular__product-list">
+            
+            <li class="product-card product-card--popular">
+              <img class="product-card__img product-card__img--popular" src="img/popular_sneakershoe.png" alt="Running sport shoe">
+              <h3 class="product-card__name">Running sport shoe</h3>
+              <div class="product-card__price-wrapper">
+                <span class="product-card__price product-card__price--popular">3999 ₽</span>
+                <button type="button" class="product-card__arrow-icon product-card__arrow-icon--popular button"></button>
+              </div>
+            </li>
+            
+            <li class="product-card product-card--popular">
+              <img class="product-card__img product-card__img--popular" src="img/popular_sneakershoe-second.png" alt="Running sport shoe">
+              <h3 class="product-card__name">Running sport shoe</h3>
+              <div class="product-card__price-wrapper">
+                <span class="product-card__price product-card__price--popular">3999 ₽</span>
+                <button type="button" class="product-card__arrow-icon product-card__arrow-icon--popular button"></button>
+              </div>
+            </li>
+            
+            <li class="product-card product-card--popular">
+              <img class="product-card__img product-card__img--popular" src="img/popular_sneakershoe-third.png" alt="Running sport shoe">
+              <h3 class="product-card__name">Running sport shoe</h3>
+              <div class="product-card__price-wrapper">
+                <span class="product-card__price product-card__price--popular">3999 ₽</span>
+                <button type="button" class="product-card__arrow-icon product-card__arrow-icon--popular button"></button>
+              </div>
+            </li>
+            
+          </ul>
+          <div class="popular__slider slider-pagination">
+            <button type="button" class="slider-pagination__button"></button>
+            <button type="button" class="slider-pagination__button slider-pagination__button--big "></button>
+            <button type="button" class="slider-pagination__button"></button>
+          </div>
+          
+          <button type="button" class="popular__slider-box-arrow-icon-left button"></button>
+          <button type="button" class="popular__slider-box-arrow-icon-right button"></button>
+          
+        </div>
+         <a href="#" class="popular__show-all popular__show-all--mobile show-all">Показать Все</a>
+      </div>
+    </section>
+    
+    
+    
+    <section class="banners">
+      <ul class="banners__list">
+        <li class="banners__item">
+          <div class="banners__container container">
+            <div class="banners__slider">
+                
+                <div class="banners__box banner">
+                  <h2 class="banner__title">Ты готов<br>проложить свой путь?</h2>
+                  <a href="#" class="banner__button">См Все</a>
+                  <div class="banner__sneakershoe-wrapper">
+                    <a href="#" class="banner__sneakershoe">
+                      <img class="banner__sneakershoe-img" src="img/sneakershoe_banner-first.png" alt="Sneakershoe">
+                    </a>
+                    <a href="#" class="banner__sneakershoe">
+                      <img class="banner__sneakershoe-img" src="img/sneakershoe_banner-second.png" alt="Sneakershoe">
+                    </a>
+                    <a href="#" class="banner__sneakershoe">
+                      <img class="banner__sneakershoe-img" src="img/sneakershoe_banner-third.png" alt="Sneakershoe">
+                    </a>
+                  </div>
+                </div>
+              
+              <div class="banners__slider-wrapper slider-pagination slider-pagination--white">
+                <button type="button" class="slider-pagination__button"></button>
+                <button type="button" class="slider-pagination__button slider-pagination__button--big "></button>
+                <button type="button" class="slider-pagination__button"></button>
+              </div>
+            </div>
+            <button type="button" class="banners__slider-box-arrow-icon-left button"></button>
+            <button type="button" class="banners__slider-box-arrow-icon-right button"></button>
+          </div>
+        </li>
+      
+        <li class="banners__item">
+          <div class="banners__container banners__container--blue container">
+            <div class="banners__slider">
+                
+                <div class="banners__box banner">
+                  <h2 class="banner__title">Ты готов<br>проложить свой путь?</h2>
+                  <a href="#" class="banner__button">См Все</a>
+                  <div class="banner__sneakershoe-wrapper">
+                    <a href="#" class="banner__sneakershoe">
+                      <img class="banner__sneakershoe-img" src="img/sneakershoe_banner-first.png" alt="Sneakershoe">
+                    </a>
+                    <a href="#" class="banner__sneakershoe">
+                      <img class="banner__sneakershoe-img" src="img/sneakershoe_banner-second.png" alt="Sneakershoe">
+                    </a>
+                    <a href="#" class="banner__sneakershoe">
+                      <img class="banner__sneakershoe-img" src="img/sneakershoe_banner-third.png" alt="Sneakershoe">
+                    </a>
+                  </div>
+                </div>
+              
+              <div class="banners__slider-wrapper slider-pagination slider-pagination--white">
+                <button type="button" class="slider-pagination__button"></button>
+                <button type="button" class="slider-pagination__button slider-pagination__button--big "></button>
+                <button type="button" class="slider-pagination__button"></button>
+              </div>
+            </div>
+            <button type="button" class="banners__slider-box-arrow-icon-left button"></button>
+            <button type="button" class="banners__slider-box-arrow-icon-right button"></button>
+          </div>
+        </li>
+        
+        <li class="banners__item">
+          <div class="banners__container banners__container--green container">
+            <div class="banners__slider">
+                
+                <div class="banners__box banner">
+                  <h2 class="banner__title">Ты готов<br>проложить свой путь?</h2>
+                  <a href="#" class="banner__button">См Все</a>
+                  <div class="banner__sneakershoe-wrapper">
+                    <a href="#" class="banner__sneakershoe">
+                      <img class="banner__sneakershoe-img" src="img/sneakershoe_banner-first.png" alt="Sneakershoe">
+                    </a>
+                    <a href="#" class="banner__sneakershoe">
+                      <img class="banner__sneakershoe-img" src="img/sneakershoe_banner-second.png" alt="Sneakershoe">
+                    </a>
+                    <a href="#" class="banner__sneakershoe">
+                      <img class="banner__sneakershoe-img" src="img/sneakershoe_banner-third.png" alt="Sneakershoe">
+                    </a>
+                  </div>
+                </div>
+              
+              <div class="banners__slider-wrapper slider-pagination slider-pagination--white">
+                <button type="button" class="slider-pagination__button"></button>
+                <button type="button" class="slider-pagination__button slider-pagination__button--big "></button>
+                <button type="button" class="slider-pagination__button"></button>
+              </div>
+            </div>
+            <button type="button" class="banners__slider-box-arrow-icon-left button"></button>
+            <button type="button" class="banners__slider-box-arrow-icon-right button"></button>
+          </div>
+        </li>
+      </ul>
+    </section>
+    
+    
     
     <section class="best-selling">
       <div class="best-selling__container container">
@@ -169,9 +358,12 @@
           </div>
           
         </div>
-        <button type="button" class="best-selling__show-all button">Показать Все</button>
+        
+          <a href="#" class="best-selling__show-all show-all">Показать Все</a>
       </div>
     </section>
+    
+    
     
     <section class="reviews">
       <div class="reviews__container container">
@@ -208,5 +400,54 @@
         </div>
       </div>
     </section>
+    
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__content">
+          <div class="footer__section">
+            <a class="footer__logo">
+              <img src="img/logo-white.svg" alt="Логотип">
+            </a>
+            <p class="footer__slogan">
+              Какие мы крутые, у нас лучшие кроссы<br>и ваще... всё.
+            </p>
+            <ul class="footer__social social">
+              <li class="social__item">
+                <a href="#">
+                  <img src="img/tg_icon-white.svg" alt="tg.com" width="21px" height="18px">
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#">
+                  <img src="img/vk_icon-white.svg" alt="vk.com" width="24px" height="16px">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__links">
+            <p class="footer__menu-name">Быстрые ссылки</p>
+            <ul class="footer__menu">
+              <li class="footer__menu-item">
+                <a>Главная</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="#">Магазин</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__subscribe-wrapper">
+            <p class="footer__subscribe-description">Подпишись на наши акции</p>
+            <form class="footer__subscribe">
+              <input type="email" placeholder="Введи Email..." class="footer__email">
+              <button type="submit" class="footer__button-subscribe">Подписаться</button>
+            </form>
+          </div>
+        </div>
+          <p class="footer__rights">www.slick.com©all right reserve</p>
+      </div>
+    </footer>
   </body>
 </html>
