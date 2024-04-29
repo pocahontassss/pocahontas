@@ -1,0 +1,23 @@
+.slider-pagination {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    
+    &__button {
+        @include clear-button;
+        
+        background-color: black;
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        
+        &--big {
+            width: 30px;
+            border-radius: 20px;
+        }
+    }
+    
+    &--white button {
+        background-color: white;
+    }
+}
