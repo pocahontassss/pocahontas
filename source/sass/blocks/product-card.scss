@@ -18,6 +18,7 @@
     &--large {
         @media (min-width: 768px) {
             padding: 60px 40px 50px 40px;
+            width: 100%;
         }
         
         @media (min-width: 1728px) {
@@ -100,7 +101,7 @@
 
     }
     
-    &--hot-icon {
+    &--hot {
         &::before {
             position: absolute;
             background-image: url("../img/hot_icon.svg");
@@ -126,7 +127,7 @@
         }
     }
     
-    &--new-icon {
+    &--new {
         &::before {
             position: absolute;
             background-image: url("../img/new_icon.svg");

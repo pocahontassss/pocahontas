@@ -35,4 +35,3 @@ productAdds.forEach(function(productAdd) {
     modalContinue.addEventListener('click', modalContinueButton);
   });
 });
-
