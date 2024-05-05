@@ -25,6 +25,15 @@
         &--showed {
             display: block;
         }
+        
+        &--email {
+            padding: 55px 35px;
+            
+            @media (max-width: 767px) {
+                padding: 30px 18px;
+                min-height: 108px;
+            }
+        }
     }
     
     &__title {
@@ -42,23 +51,20 @@
         }
         
         &--red {
-            color: red;
+            color: #DC4B54;
+            ;
         }
     }
     
     &__button {
-        @include clear-button;
-        
-        display: block;
-        background-color: black;
-        color: white;
+        background-color: #000000;
+        color: #fff;
         width: 254px;
         height: 48px;
         font-size: 16px;
         line-height: 25px;
         font-weight: 600;
         padding: 13px 25px;
-        text-align: center;
         margin: 0 auto;
         box-shadow: 0px 2.32px 1.97px 0px #00000006,
         0px 5.39px 4.58px 0px #00000009,
@@ -96,17 +102,6 @@
                 width: 20px;
                 height: 20px;
             }
-        }
-    }
-    
-    /* Модальное окно для подтверждения email */
-    
-    &__email {
-        padding: 55px 35px;
-        
-        @media (max-width: 767px) {
-            padding: 30px 18px;
-            min-height: 108px;
         }
     }
     
