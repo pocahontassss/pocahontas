@@ -1,3 +1,5 @@
+import { openModal } from "./addProduct.js";
+
 export default (products, template, target, isTargetList = false, templateClass = '') => {
     const fragment = document.createDocumentFragment();
 
@@ -23,6 +25,10 @@ export default (products, template, target, isTargetList = false, templateClass 
         const oldPriceEl = itemEl.querySelector('.product-card__old-price');
         const button = itemEl.querySelector('.product-card__arrow-icon');
         const { id, name, image, price, oldPrice, status, isBig = ''} = product;
+        
+        button.addEventListener('click', () => {
+            openModal();
+        });
     
         itemEl.dataset.productId = id;
         imageEl.src = image;

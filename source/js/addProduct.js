@@ -10,15 +10,16 @@ const modalClose = () => {
   modalProductClose.removeEventListener('click', modalClose);
 };
 
-const modalContinueButton = () => {
-  modalProductAdd.classList.remove('modal__container--showed');
-  modalProductClose.removeEventListener('click', modalContinueButton);
-};
+const modalContinueButton = modalClose;
+
+function openModal() {
+  modalProductAdd.classList.add('modal__container--showed');
+  modalProductClose.addEventListener('click', modalClose);
+  modalContinue.addEventListener('click', modalContinueButton);
+}
 
 productAdds.forEach(function(productAdd) {
-  productAdd.addEventListener('click', () => {
-    modalProductAdd.classList.add('modal__container--showed');
-    modalProductClose.addEventListener('click', modalClose);
-    modalContinue.addEventListener('click', modalContinueButton);
-  });
+  productAdd.addEventListener('click', openModal);
 });
+
+export {openModal};
