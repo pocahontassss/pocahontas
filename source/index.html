@@ -321,45 +321,24 @@
         
         <div class="best-selling__product-wrapper">
           
-          <div class="best-selling__product best-selling__product--1-3">
-            <div class="product-card product-card--large product-card--hot-icon">
-              <img class="product-card__img" src="img/slick-formal-sneakershoe-best-sell.png" alt="slick-formal-sneakershoe">
-              <h3 class="product-card__name">Slick formal sneaker shoe</h3>
-              <div class="product-card__price-wrapper">
-                <span class="product-card__price">2999 ₽</span>
-                <span class="product-card__old-price"><s>4999 ₽</s></span>
-                <button type="button" class="product-card__arrow-icon button"></button>
+          <template id="product">
+            <div class="product">
+              <div class="best-selling__product best-selling__product--1-3">
+                <div class="product-card">
+                  <img class="product-card__img" src="img/slick-formal-sneakershoe-best-sell.png" alt="slick-formal-sneakershoe">
+                  <h3 class="product-card__name">Slick formal sneaker shoe</h3>
+                  <div class="product-card__price-wrapper">
+                    <span class="product-card__price">2999 ₽</span>
+                    <span class="product-card__old-price"><s>4999 ₽</s></span>
+                    <button type="button" class="product-card__arrow-icon button"></button>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          
-          <div class="best-selling__product best-selling__product--default">
-            <div class="product-card product-card--new-icon">
-              <img class="product-card__img" src="img/slick-sneakershoe-best-sell.png" alt="slick-sneakershoe">
-              <h3 class="product-card__name">Slick sneaker shoe</h3>
-              <div class="product-card__price-wrapper">
-                <span class="product-card__price">2999 ₽</span>
-                <span class="product-card__old-price"><s>3999 ₽</s></span>
-                <button type="button" class="product-card__arrow-icon button"></button>
-              </div>
-            </div>
-          </div>
-          
-          <div class="best-selling__product best-selling__product--default">
-            <div class="product-card">
-              <img class="product-card__img" src="img/slick-canvasshoe-best-sell.png" alt="slick-canvasshoe">
-              <h3 class="product-card__name">Slick canvas shoe</h3>
-              <div class="product-card__price-wrapper">
-                <span class="product-card__price">2999 ₽</span>
-                <span class="product-card__old-price"><s>3999 ₽</s></span>
-                <button type="button" class="product-card__arrow-icon button"></button>
-              </div>
-            </div>
-          </div>
+          </template>
           
         </div>
         
-          <a href="#" class="best-selling__show-all show-all">Показать Все</a>
       </div>
     </section>
     
@@ -449,15 +428,27 @@
           <p class="footer__rights">www.slick.com©all right reserve</p>
       </div>
     </footer>
+    
+    
+    
     <div class="modal">
-        <div class="modal__addProduct">
-          <button type="button" class="modal__addProduct-buttonClose">
-            <img src="img/close_icon.svg" alt="Закрыть меню">
-          </button>
-          <p class="modal__addProduct-description">Товар успешно<br>добавлен в корзину</p>
-          <button class="modal__addProduct-button">Продолжить покупки</button>
-      </div>
+      
+      <div class="modal__container modal__container--add-product">
+        <button type="button" class="modal__button-close">
+          <img src="img/close_icon.svg" alt="Закрыть меню">
+        </button>
+        <h2 class="modal__title">Товар успешно<br>добавлен в корзину</h2>
+        <button type="button" class="button modal__button">Продолжить покупки</button>
     </div>
-    <script src="js/script.js" defer></script>
-  </body>
+    
+    <div class="modal__container modal__container--email">
+      <button type="button" class="modal__button-close">
+        <img src="img/close_icon.svg" alt="Закрыть меню">
+      </button>
+      <h2 class="modal__title modal__email-title">Проверьте ваш email и подтвердите подписку</h2>
+    </div>
+    
+  </div>
+  <script src="js/main.js" defer type="module"></script>
+</body>
 </html>
