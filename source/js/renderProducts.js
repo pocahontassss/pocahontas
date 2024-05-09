@@ -24,7 +24,7 @@ export default (products, template, target, isTargetList = false, templateClass 
         const priceEl = itemEl.querySelector('.product-card__price');
         const oldPriceEl = itemEl.querySelector('.product-card__old-price');
         const button = itemEl.querySelector('.product-card__arrow-icon');
-        const { id, name, image, price, oldPrice, status, isBig = ''} = product;
+        const { id, name, image, price, oldPrice, status = '', isBig = ''} = product;
         
         button.addEventListener('click', () => {
             openModal();
