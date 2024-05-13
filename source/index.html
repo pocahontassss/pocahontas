@@ -53,12 +53,12 @@
           <button type="button" class="header__button">
             <img src="img/find_icon.svg" alt="Поиск">
           </button>
-          <button type="button" class="header__button">
-            <span class="header__number-basket">5</span>
+          <a class="header__basket">
+            <span class="header__number-basket">0</span>
             <img src="img/shop_icon.svg" alt="Корзина">
-          </button>
+          </a>
         </div>
-        
+
         <button type="button" class="header__burger">
           <img src="img/menu_icon.svg" alt="Меню">
         </button>
@@ -448,6 +448,31 @@
       <h2 class="modal__title modal__email-title">Проверьте ваш email и подтвердите подписку</h2>
     </div>
     
+    <div class="shopping-cart">
+      <h2 class="shopping-cart__title">Корзина Товаров</h2>
+      <button type="button" class="shopping-cart__button-close button">
+        <img src="img/close_icon.svg" alt="Закрыть корзину">
+      </button>
+      <template class="shopping-cart__template">
+        <li class="shopping-cart__item">
+          <img class="shopping-cart__img" src="img/popular_sneakershoe.png">
+          <h3 class="shopping-cart__name">Running sport shoe</h3>
+          <div class="shopping-cart__count">
+            <button class="shopping-cart__button shopping-cart__button--minus ">-</button>
+            <input class="shopping-cart__input" type="text" name="shopping-cart-count" value="1">
+            <button class="shopping-cart__button shopping-cart__button--plus">+</button>
+          </div>
+          <span class="shopping-cart__price">3999</span>
+        </li>
+      </template>
+      <ul class="shopping-cart__list"></ul>
+      <div class="shopping-cart__total-wrapper">
+        <span class="shopping-cart__total-text">Итого:</span>
+        <span class="shopping-cart__total">0<span> шт.</span></span>
+        <span class="shopping-cart__total-price">0</span>
+      </div>
+      <button class="shopping-cart__submit button">Оформить заказ</button>
+    </div>
   </div>
   <script src="js/main.js" defer type="module"></script>
 </body>

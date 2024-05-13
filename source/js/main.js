@@ -1,7 +1,5 @@
-import { getApi } from './getApi.js';
-import './addProduct.js';
-import './openMenu.js';
-import './modalEmail.js';
+import { getApi } from './api.js';
+import './cart.js';
 import renderProducts from './renderProducts.js';
 
 const catalogList = document.querySelector('.best-selling__product-wrapper');

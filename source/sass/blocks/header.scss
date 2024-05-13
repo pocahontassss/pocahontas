@@ -158,6 +158,20 @@
         }
     }
     
+    &__basket {  
+        img {
+            @media (min-width: 768px) {
+                width: 29px;
+                height: 27px;
+            }
+            
+            @media (min-width: 1728px) {
+                width: 31px;
+                height: 26px;
+            }
+        }
+    }
+    
     &__burger {
         @include clear-button;
         

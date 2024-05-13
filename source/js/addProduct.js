@@ -1,5 +1,3 @@
-// Модальное окно об добавлении продуктов в корзину
-
 const productAdds = document.querySelectorAll('.product-card__arrow-icon');
 const modalProductAdd = document.querySelector('.modal__container--add-product');
 const modalProductClose = document.querySelector('.modal__button-close');
