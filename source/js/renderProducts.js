@@ -1,6 +1,7 @@
 import { openModal } from "./addProduct.js";
 import { addToStorage } from "./storage.js";
-import { addToCart } from "./cart.js";
+import { renderCart } from "./cart.js";
+import { editCartCount } from "./cart.js";
 
 export default (products, template, target, isTargetList = false, templateClass = '') => {
     const fragment = document.createDocumentFragment();
@@ -31,7 +32,8 @@ export default (products, template, target, isTargetList = false, templateClass 
         button.addEventListener('click', () => {
             openModal();
             addToStorage('cart', product);
-            addToCart(product);
+            renderCart();
+            editCartCount();
         });
     
         itemEl.dataset.productId = id;

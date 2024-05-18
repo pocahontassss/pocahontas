@@ -455,8 +455,10 @@
       </button>
       <template class="shopping-cart__template">
         <li class="shopping-cart__item">
-          <img class="shopping-cart__img" src="img/popular_sneakershoe.png">
-          <h3 class="shopping-cart__name">Running sport shoe</h3>
+          <div class = "shopping-cart__product-wrapper">
+            <img class="shopping-cart__img" src="img/popular_sneakershoe.png">
+            <h3 class="shopping-cart__name">Running sport shoe</h3>
+          </div>
           <div class="shopping-cart__count">
             <button class="shopping-cart__button shopping-cart__button--minus ">-</button>
             <input class="shopping-cart__input" type="text" name="shopping-cart-count" value="1">
@@ -468,11 +470,39 @@
       <ul class="shopping-cart__list"></ul>
       <div class="shopping-cart__total-wrapper">
         <span class="shopping-cart__total-text">Итого:</span>
-        <span class="shopping-cart__total">0<span> шт.</span></span>
-        <span class="shopping-cart__total-price">0</span>
+        <span class="shopping-cart__total"><span>0</span> шт.</span>
+        <span class="shopping-cart__total-price">0 ₽</span>
       </div>
       <button class="shopping-cart__submit button">Оформить заказ</button>
     </div>
+    
+    <div class="modal__container modal__container--checkOut">
+      <button type="button" class="modal__button-close">
+        <img src="img/close_icon.svg" alt="Закрыть меню">
+      </button>
+      <h2 class="modal__title modal__checkOut-title">Для оформления заказа<br>укажите ваш номер телефона:</h2>
+      <form class="modal__checkOut-form-wrapper">
+        <input type="tel" class="modal__checkOut-input" placeholder="Номер Телефона...">
+        <button type="submit" class="button modal__button modal__checkOut-button">Отправить</button>
+        <div class="modal__checkOut-checkbox-wrapper">  
+          <input class="modal__checkOut-checkbox" type="checkbox">
+          <span class="modal__checkOut-custom-checkbox"></span>
+          <span class="modal__checkOut-checkbox-text">Согласен с
+            <a href="#" class="modal__checkOut-privacy">политикой конфиденциальности</a>
+          </span>
+        </div>
+      </form>
+    </div>
+    
+    <div class="modal__container modal__container--waiting">
+      <button type="button" class="modal__button-close">
+        <img src="img/close_icon.svg" alt="Закрыть меню">
+      </button>
+      <h2 class="modal__title modal__waiting-title">Заказ оформлен. Ожидайте звонка</h2>
+      <button type="button" class="button modal__button modal__waiting-button">Вернуться на главную</button>
+    </div>
+    
+    <div class="modal__overlay"></div>
   </div>
   <script src="js/main.js" defer type="module"></script>
 </body>
