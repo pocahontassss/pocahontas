@@ -1,7 +1,9 @@
+import './modalWaiting.js';
+
 const modalOpen = document.querySelector('.shopping-cart__submit');
 const cart = document.querySelector('.shopping-cart');
-const modal = document.querySelector ('.modal__container--checkOut');
-const modalClose = document.querySelector('.modal__container--checkOut .modal__button-close');
+const modal = document.querySelector ('.checkOut');
+const modalClose = document.querySelector('.checkOut .modal__button-close');
 const overlay = document.querySelector('.modal__overlay');
 
 const ModalCloseButton = () => {
@@ -17,7 +19,7 @@ modalOpen.addEventListener('click', () => {
   modalClose.addEventListener('click', ModalCloseButton); 
 });
 
-const input = document.querySelector('.modal__checkOut-input');
+const input = document.querySelector('.input');
 let reg = /[A-Za-zА-Яа-яЁё]/g;
 
 input.oninput = function() {

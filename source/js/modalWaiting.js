@@ -1,13 +1,13 @@
-const modalWaitingOpen = document.querySelector('.modal__checkOut-button');
-const modalCheckout = document.querySelector('.modal__container--checkOut');
+const modalCheckout = document.querySelector('.checkOut');
+const modalWaitingOpen = modalCheckout.querySelector('.checkOut__button');
 const modalWaitingClose = document.querySelector('.modal__container--waiting .modal__button-close');
 const modalWaiting = document.querySelector('.modal__container--waiting');
 const modalContinue = document.querySelector('.modal__container--waiting .modal__button');
 const overlay = document.querySelector('.modal__overlay');
 
-const button = document.querySelector('.modal__checkOut-button');
-const checkBox = document.querySelector('.modal__checkOut-checkbox');
-const input = document.querySelector('.modal__checkOut-input');
+const button = modalCheckout.querySelector('.checkOut__button');
+const checkBox = modalCheckout.querySelector('.checkbox');
+const input = modalCheckout.querySelector('.input');
 
 const modalClose = () => {
   modalWaiting.classList.remove('modal__container--showed');
@@ -18,18 +18,15 @@ const modalClose = () => {
 const modalContinueButton = modalClose;
 
 modalWaitingOpen.addEventListener('click', (event) => {
-  if (checkBox.checked === true) {
-    event.preventDefault();
-    modalCheckout.classList.remove('modal__container--showed');
+  event.preventDefault();
+  if(!input.value || !checkBox.checked) {
+    alert(!input.value ? 'Ошибка! Необходимо ввести номер телефона!'  : 'Ошибка! Необходимо подтвердить согласие с политикой конфиденциальности');
+    return;
+  }
+
+  modalCheckout.classList.remove('modal__container--showed');
   modalWaiting.classList.add('modal__container--showed');
   overlay.classList.add('modal__overlay--showed');
   modalWaitingClose.addEventListener('click', modalClose, modalContinueButton);
   modalContinue.addEventListener('click', modalContinueButton);
-  } else if (input.value === '') {
-    alert('Ошибка! Необходимо ввести номер телефона!');
-    event.preventDefault();
-  } else {
-    alert('Ошибка! Необходимо подтвердить согласие с политикой конфиденциальности');
-    event.preventDefault();
-  }
 });
