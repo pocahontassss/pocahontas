@@ -1,14 +1,24 @@
 .hero {
-    
     &__caption {
         position: relative;
         
         @media (min-width: 768px) {
             margin-bottom: 71px;
         }
+        
+        @media (min-width: 1728px) {
+            margin-bottom: 202px;
+        }
+    
     }
+
     
     &__container {
+        margin-top: 81px;
+        
+        @media (min-width: 768px) {
+            margin-top: 113px;
+        }
         
         @media (min-width: 1728px) {
             display: flex;
@@ -18,14 +28,13 @@
     }
     
     &__title-wrapper {
-        margin-top: 59px;
         
         @media (min-width: 768px) {
             margin-bottom: 71px;
         }
         
         @media (min-width: 1728px) {
-        margin-top: 340px;
+        margin-top: 226px;
         }
     }
     
@@ -104,8 +113,6 @@
     &__button {
         display: block;
         margin: 0 auto;
-        color: white;
-        background-color: black;
         width: 300px;
         height: 55px;
         box-shadow: 0px 2px 2px 0px #00000006,
@@ -159,11 +166,10 @@
         @media (min-width: 1728px) {
             background: transparent;
             padding-bottom: 131px;
-            padding-top: 160px;
             
             &::before {
                 position: absolute;
-                top: 0;
+                top: -270px;
                 bottom: 0;
                 left: 43%;
                 width: calc(50vw + 6%);
@@ -173,7 +179,7 @@
                     linear-gradient(90deg, #E4E4E4 0%, #FAFAFA 100%);
                 background-repeat: no-repeat no-repeat;
                 z-index: 1;
-                background-position: -1% 90%;
+                background-position: -1% 95%;
             }
         }
     }

@@ -26,7 +26,7 @@
             display: inline-block;
             width: 41px;
             height: 3px;
-            background-color: black;
+            background-color: #000;
             margin: 9px;
             transform: translateY(-2px);
             content: '';
@@ -50,12 +50,12 @@
     &__avatar {
         width: 54px;
         height: 75px;
-        box-shadow: 0px 3px 2px 0px #00000005,
-        0px 7px 5px 0px #00000007,
-        0px 12px 10px 0px #00000009,
-        0px 22px 18px 0px #0000000B,
-        0px 42px 33px 0px #0000000D,
-        0px 100px 80px 0px #00000012;
+        filter: drop-shadow(0px 3px 2px #00000005)
+        drop-shadow(0px 7px 5px #00000007)
+        drop-shadow(0px 12px 10px #00000009)
+        drop-shadow(0px 22px 18px #0000000B)
+        drop-shadow(0px 42px 33px #0000000D)
+        drop-shadow(0px 100px 80px #00000012);
         float: left;
         margin-right: 20px;
         margin-bottom: 20px;

@@ -1,6 +1,7 @@
-import { openModal } from "./addProduct.js";
+import { openModal } from "./modalAddProduct.js";
 import { addToStorage } from "./storage.js";
 import { renderCart } from "./cart.js";
+import { editCartCount } from "./cart.js"; 
 
 export default (products, template, target, isTargetList = false, templateClass = '') => {
     const fragment = document.createDocumentFragment();
@@ -32,6 +33,7 @@ export default (products, template, target, isTargetList = false, templateClass 
             openModal();
             addToStorage('cart', product);
             renderCart();
+            editCartCount();
         });
     
         itemEl.dataset.productId = id;

@@ -1,5 +1,3 @@
-// Модальное окно - проверка подписки, email
-
 const modalEmailOpen = document.querySelector('.footer__button-subscribe');
 const modalEmailClose = document.querySelector('.modal__container--email .modal__button-close');
 const modalEmail = document.querySelector('.modal__container--email');

@@ -3,6 +3,9 @@ import './cart.js';
 import renderProducts from './renderProducts.js';
 import './modalEmail.js';
 import './menu.js';
+import './headerScroll.js';
+import './modal.js';
+import './hello.js';
 
 const catalogList = document.querySelector('.best-selling__product-wrapper');
 const catalogItemTemplate = document.querySelector('#product').content;

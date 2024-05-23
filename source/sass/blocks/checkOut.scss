@@ -6,66 +6,65 @@
         padding: 30px;
     }
     
-&__title {
-    text-align: start;
-    margin-bottom: 27px;
-    text-transform: capitalize;
-    
-    @media (max-width: 767px) {
-        font-size: 16px;
-        line-height: 19px;
-        margin-bottom: 17px;  
-        text-transform: none;
+    &__title {
+        text-align: start;
+        margin-bottom: 27px;
+        text-transform: capitalize;
+        
+        @media (max-width: 767px) {
+            font-size: 16px;
+            line-height: 19px;
+            margin-bottom: 17px;  
+            text-transform: none;
+        }
     }
-}
 
-&__button {
-    margin-top: 15px;
-    background-color: #4B85DC;
-    line-height: 22px;
-    order: 2;
-    
-    @media (min-width: 768px) {
-        width: 239px;
-        height: 47px;
-        font-size: 20px;
-        line-height: 14px;
-        margin: 0;
+    &__button {
+        margin-top: 15px;
+        line-height: 22px;
+        order: 2;
+        
+        @media (min-width: 768px) {
+            width: 239px;
+            height: 47px;
+            font-size: 20px;
+            line-height: 14px;
+            margin: 0;
+        }
     }
-}
 
-&__checkbox-text {
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 15px;
-    display: inline-block;
-    
-    @media (min-width: 768px) {
-        font-size: 16px;
-        line-height: 19px; 
+    &__checkbox-text {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 15px;
+        display: inline-block;
+        
+        @media (min-width: 768px) {
+            font-size: 16px;
+            line-height: 19px; 
+        }
     }
-}
 
-&__form-wrapper {
-    display: flex;
-    flex-direction: column;
-    
-    @media (min-width: 768px) {
-        flex-direction: row;
-        flex-wrap: wrap;
-        column-gap: 20px;
+    &__form-wrapper {
+        display: flex;
+        flex-direction: column;
+        
+        @media (min-width: 768px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            column-gap: 20px;
+        }
     }
-}
 
-&__checkbox-wrapper {
-    display: flex;
-    gap: 10px;
-    
-    @media (min-width: 768px) {
-        width: 100%;
-        order: 3;
-        align-items: center;
-        margin-top: 12px;
+    &__checkbox-wrapper {
+        display: flex;
+        gap: 10px;
+        
+        @media (min-width: 768px) {
+            width: 100%;
+            order: 3;
+            align-items: center;
+            margin-top: 12px;
+        }
     }
 }
-};

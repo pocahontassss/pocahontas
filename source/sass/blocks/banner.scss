@@ -1,6 +1,6 @@
 .banner {
     &__title {
-        color: white;
+        color: #fff;
         text-align: center;
         font-size: 24px;
         font-weight: 500;
@@ -21,8 +21,6 @@
         width: 300px;
         height: 48px;
         text-align: center;
-        background-color: white;
-        color: #DC4B54;
         font-weight: 700;
         font-size: 20px;
         line-height: 24px;
@@ -58,7 +56,7 @@
     
     &__sneakershoe {
         position: relative;
-        background-color: white;
+        background-color: #fff;
         width: 71px;
         height: 71px;
         border-radius: 8px;

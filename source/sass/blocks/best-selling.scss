@@ -17,7 +17,7 @@
             display: inline-block;
             width: 41px;
             height: 3px;
-            background-color: black;
+            background-color: #000;
             margin: 9px;
             transform: translateY(-2px);
             content: '';
@@ -42,12 +42,11 @@
         }
         
         &--man {
-            background-color: black;
-            color: white;
             width: 141px;
             height: 35px;
             font-size: 14px;
             line-height: 19px;
+            cursor: pointer;
             
             @media (min-width: 768px) {
                 width: 219px;
@@ -65,6 +64,8 @@
             color: rgba(0, 0, 0, 0.8);
             border: solid;
             border-width: 2px;
+            cursor: pointer;
+            background-color: #fff;
             
             @media (min-width: 768px) {
                 width: 219px;

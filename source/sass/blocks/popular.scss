@@ -27,7 +27,7 @@
             display: inline-block;
             width: 47px;
             height: 3px;
-            background-color: black;
+            background-color: #000;
             margin-right: 22px;
             transform: translateY(-6px);
             content: '';
@@ -116,10 +116,11 @@
     }
 
     &__slider-box-arrow-icon-left {
+        @include clear-button;
         
         @media (min-width: 768px) {
         position: absolute;
-        background-image: url("../img/popular_arrow-left.svg");
+        background-image: url("../img/arrow-slider.svg");
         background-repeat: no-repeat;
         width: 15px;
         height: 27px;
@@ -134,10 +135,12 @@
     }
     
     &__slider-box-arrow-icon-right {
+        @include clear-button;
         
         @media (min-width: 768px) {
         position: absolute;
-        background-image: url("../img/popular_arrow-right.svg");
+        background-image: url("../img/arrow-slider.svg");
+        transform: rotate(180deg);
         background-repeat: no-repeat;
         width: 15px;
         height: 27px;

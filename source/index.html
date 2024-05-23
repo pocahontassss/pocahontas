@@ -50,7 +50,7 @@
         </nav>
         
         <div class="header__interaction">
-          <button type="button" class="header__button">
+          <button type="button" class="header__search">
             <img src="img/find_icon.svg" alt="Поиск">
           </button>
           <a class="header__basket">
@@ -63,6 +63,8 @@
           <img src="img/menu_icon.svg" alt="Меню">
         </button>
       </div>
+      
+      <div class="header__overlay overlay"></div>
     </header>
     
     
@@ -80,7 +82,7 @@
           <p class="hero__subtitle">
             Какой-то супер-мотивирующий текст<br>чтоб купили прям вообще всё
           </p>
-          <a href="#" class="hero__button">За Покупками</a>
+          <a href="#" class="hero__button button">За Покупками</a>
         </div>
         
         <div class="hero__product">
@@ -162,7 +164,7 @@
           <span class="popular__text">Самые</span>
           <span class="popular__text">Популярные</span>
           <p class="popular__description">Посмотрите, что чаще всего покупают у нас</p>
-          <a href="#" class="popular__show-all popular__show-all--tablet show-all">Показать Все</a>
+          <a href="#" class="popular__show-all popular__show-all--tablet show-all button">Показать Все</a>
         </div>
         <div class="popular__slider-box">
           <ul class="popular__product-list">
@@ -201,11 +203,11 @@
             <button type="button" class="slider-pagination__button"></button>
           </div>
           
-          <button type="button" class="popular__slider-box-arrow-icon-left button"></button>
-          <button type="button" class="popular__slider-box-arrow-icon-right button"></button>
+          <button type="button" class="popular__slider-box-arrow-icon-left"></button>
+          <button type="button" class="popular__slider-box-arrow-icon-right"></button>
           
         </div>
-         <a href="#" class="popular__show-all popular__show-all--mobile show-all">Показать Все</a>
+         <a href="#" class="popular__show-all popular__show-all--mobile show-all button">Показать Все</a>
       </div>
     </section>
     
@@ -219,7 +221,7 @@
                 
                 <div class="banners__box banner">
                   <h2 class="banner__title">Ты готов<br>проложить свой путь?</h2>
-                  <a href="#" class="banner__button">См Все</a>
+                  <a href="#" class="banner__button button--white">См Все</a>
                   <div class="banner__sneakershoe-wrapper">
                     <a href="#" class="banner__sneakershoe">
                       <img class="banner__sneakershoe-img" src="img/sneakershoe_banner-first.png" alt="Sneakershoe">
@@ -239,8 +241,8 @@
                 <button type="button" class="slider-pagination__button"></button>
               </div>
             </div>
-            <button type="button" class="banners__slider-box-arrow-icon-left button"></button>
-            <button type="button" class="banners__slider-box-arrow-icon-right button"></button>
+            <button type="button" class="banners__slider-box-arrow-icon-left"></button>
+            <button type="button" class="banners__slider-box-arrow-icon-right"></button>
           </div>
         </li>
       
@@ -250,7 +252,7 @@
                 
                 <div class="banners__box banner">
                   <h2 class="banner__title">Ты готов<br>проложить свой путь?</h2>
-                  <a href="#" class="banner__button">См Все</a>
+                  <a href="#" class="banner__button button--white">См Все</a>
                   <div class="banner__sneakershoe-wrapper">
                     <a href="#" class="banner__sneakershoe">
                       <img class="banner__sneakershoe-img" src="img/sneakershoe_banner-first.png" alt="Sneakershoe">
@@ -270,8 +272,8 @@
                 <button type="button" class="slider-pagination__button"></button>
               </div>
             </div>
-            <button type="button" class="banners__slider-box-arrow-icon-left button"></button>
-            <button type="button" class="banners__slider-box-arrow-icon-right button"></button>
+            <button type="button" class="banners__slider-box-arrow-icon-left"></button>
+            <button type="button" class="banners__slider-box-arrow-icon-right"></button>
           </div>
         </li>
         
@@ -281,7 +283,7 @@
                 
                 <div class="banners__box banner">
                   <h2 class="banner__title">Ты готов<br>проложить свой путь?</h2>
-                  <a href="#" class="banner__button">См Все</a>
+                  <a href="#" class="banner__button button--white">См Все</a>
                   <div class="banner__sneakershoe-wrapper">
                     <a href="#" class="banner__sneakershoe">
                       <img class="banner__sneakershoe-img" src="img/sneakershoe_banner-first.png" alt="Sneakershoe">
@@ -301,8 +303,8 @@
                 <button type="button" class="slider-pagination__button"></button>
               </div>
             </div>
-            <button type="button" class="banners__slider-box-arrow-icon-left button"></button>
-            <button type="button" class="banners__slider-box-arrow-icon-right button"></button>
+            <button type="button" class="banners__slider-box-arrow-icon-left"></button>
+            <button type="button" class="banners__slider-box-arrow-icon-right"></button>
           </div>
         </li>
       </ul>
@@ -338,7 +340,7 @@
           </template>
           
         </div>
-        
+        <a href="#" class="best-selling__show-all show-all button">Показать Все</a>
       </div>
     </section>
     
@@ -432,7 +434,7 @@
     
     
     <div class="modal">
-      <div class="modal__overlay"></div>
+      <div class="modal__overlay overlay"></div>
       
       <div class="modal__container modal__container--add-product">
         <button type="button" class="modal__button-close">
@@ -451,7 +453,7 @@
     
       <div class="shopping-cart">
         <h2 class="shopping-cart__title">Корзина Товаров</h2>
-        <button type="button" class="shopping-cart__button-close button">
+        <button type="button" class="shopping-cart__button-close">
           <img src="img/close_icon.svg" alt="Закрыть корзину">
         </button>
         <template class="shopping-cart__template">
@@ -474,7 +476,7 @@
           <span class="shopping-cart__total"><span>0</span> шт.</span>
           <span class="shopping-cart__total-price">0 ₽</span>
         </div>
-        <button class="shopping-cart__submit button">Оформить заказ</button>
+        <button class="shopping-cart__submit button button--red">Оформить заказ</button>
       </div>
     
       <div class="modal__container checkOut">
@@ -484,7 +486,7 @@
         <h2 class="modal__title checkOut__title">Для оформления заказа<br>укажите ваш номер телефона:</h2>
         <form class="checkOut__form-wrapper">
           <input type="tel" class="input" placeholder="Номер Телефона...">
-          <button type="submit" class="button modal__button checkOut__button">Отправить</button>
+          <button type="submit" class="modal__button checkOut__button button button--blue ">Отправить</button>
           <div class="checkOut__checkbox-wrapper">  
             <input class="checkbox" type="checkbox">
             <span class="checkbox__custom"></span>
@@ -501,6 +503,16 @@
         </button>
         <h2 class="modal__title modal__waiting-title">Заказ оформлен. Ожидайте звонка</h2>
         <button type="button" class="button modal__button modal__waiting-button">Вернуться на главную</button>
+      </div>
+      
+    
+      
+      <div class="modal__container modal__container--hello">
+        <button type="button" class="modal__button-close">
+          <img src="img/close_icon.svg" alt="Закрыть меню">
+        </button>
+        <h2 class="modal__title">hello</h2>
+        <button type="button" class="button modal__button">world</button>
       </div>
       
     </div>

@@ -1,22 +1,32 @@
 .header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    background-color: #fff ;
+    z-index: 3;
+    padding-bottom: 5px;
+    
     
     @media (min-width:1728px) {
-        position: absolute;
-        z-index: 5;
-        width: 100%;
+        background-color: transparent;
+    }
+    
+    &--scroll {
+        border-bottom: #dedede 1px solid;
+        background-color: #fff;
     }
     
     &__container {
         display: flex;
         align-items: center;
-        margin-top: 15px;
+        padding-top: 15px;
         
         @media (min-width: 768px) {
             margin-top: 21px;
         }
         
         @media (min-width: 1728px) {
-            margin-top: 77px;
+            margin-top: 62px;
         }
     }
     
@@ -67,6 +77,7 @@
         position: absolute;
         right: 14px;
         top: 20px;
+        cursor: pointer;
         
         img {
             height: 12px;
@@ -142,8 +153,10 @@
         }
     }
     
-    &__button {
+    &__search {
         @include clear-button;
+        
+        cursor: pointer;
         
         img {
             @media (min-width: 768px) {
@@ -159,6 +172,8 @@
     }
     
     &__basket {  
+        cursor: pointer;
+        
         img {
             @media (min-width: 768px) {
                 width: 29px;
@@ -175,6 +190,7 @@
     &__burger {
         @include clear-button;
         
+        cursor: pointer;
         margin-left: 28px;
         
         @media (min-width: 768px) {
@@ -202,7 +218,7 @@
         display: flex;
         gap: 28px;
         margin-left: auto;
-        
+
         @media (min-width: 768px) {
             gap: 44px;
             margin-left: 122px;
@@ -226,6 +242,7 @@
         padding: 1px 4px;
         top: -4px;
         right: -4px;
+        cursor: pointer;
         
         @media (min-width: 768px) {
             font-size: 11px;

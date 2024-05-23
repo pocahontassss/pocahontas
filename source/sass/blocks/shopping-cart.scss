@@ -62,8 +62,6 @@
         &__submit {
                 width: 260px;
                 height: 63px;
-                background-color: #DC4B54;
-                color: #fff;
                 box-shadow: 0px 2px 2px 0px #00000006,
                 0px 5px 5px 0px #00000009,
                 0px 10px 8px 0px #0000000B,
@@ -76,6 +74,7 @@
                 text-align: center;
                 font-weight: 600;
                 margin: 0 auto;
+                cursor: pointer;
                 
                 @media (min-width: 768px) {
                         width: 312px;
@@ -87,9 +86,12 @@
         }
         
         &__button-close { 
+                @include clear-button;
+                
                 position: absolute;
                 right: 15px;
                 top: 15px;
+                cursor: pointer;
                 
                 @media (min-width: 768px) {
                     right: 20px;
@@ -184,6 +186,7 @@
                 font-size: 21px;
                 font-weight: 500;
                 line-height: 25px;
+                cursor: pointer;
         }
         
         &__count {
@@ -194,6 +197,7 @@
                         margin-right: 10px;
                         font-weight: 500;
                         font-size: 15px;
+                        
                 }
                 
                 &::after {
