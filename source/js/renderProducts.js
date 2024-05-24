@@ -1,4 +1,4 @@
-import { openModal } from "./modalAddProduct.js";
+import { openModal } from "./modal.js";
 import { addToStorage } from "./storage.js";
 import { renderCart } from "./cart.js";
 import { editCartCount } from "./cart.js"; 
@@ -29,8 +29,9 @@ export default (products, template, target, isTargetList = false, templateClass 
         const button = itemEl.querySelector('.product-card__arrow-icon');
         const { id, name, image, price, oldPrice, status = '', isBig = ''} = product;
         
-        button.addEventListener('click', () => {
-            openModal();
+        button.addEventListener('click', (event) => {
+            const modal = document.getElementById('modal_add-product');
+            openModal(event, modal);
             addToStorage('cart', product);
             renderCart();
             editCartCount();

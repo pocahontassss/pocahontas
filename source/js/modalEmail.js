@@ -1,17 +1,8 @@
-const modalEmailOpen = document.querySelector('.footer__button-subscribe');
-const modalEmailClose = document.querySelector('.modal__container--email .modal__button-close');
-const modalEmail = document.querySelector('.modal__container--email');
-const overlay = document.querySelector('.modal__overlay');
+import { openModal } from "./modal.js"; 
 
-const EmailCloseButton = () => {
-  modalEmail.classList.remove('modal__container--showed');
-  overlay.classList.remove('modal__overlay--showed');
-  modalEmailClose.removeEventListener ('click', EmailCloseButton);
-};
+const modalOpen = document.querySelector('.footer__button-subscribe');
+const modalEmail = document.getElementById('modal_email');
 
-modalEmailOpen.addEventListener('click', (event) => {
-  event.preventDefault();
-  modalEmail.classList.add('modal__container--showed');
-  overlay.classList.add('modal__overlay--showed');
-  modalEmailClose.addEventListener('click', EmailCloseButton);
+modalOpen.addEventListener('click', (event) => {
+  openModal(event, modalEmail);
 });

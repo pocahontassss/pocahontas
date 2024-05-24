@@ -4,20 +4,21 @@ import './modalcheckOut.js';
 
 const cart = document.querySelector('.shopping-cart');
 const openCart = document.querySelector('.header__basket');
-const closeCart = document.querySelector('.shopping-cart__button-close');
-const checkOut = document.querySelector('.shopping-cart__submit');
-const overlay = document.querySelector('.modal__overlay');
+const closeCart = cart.querySelector('.shopping-cart__button-close');
+const overlay = document.getElementById('modal_overlay');
 
 const CloseCartButton = ('click', () => {
     cart.classList.remove('shopping-cart--open');
-    overlay.classList.remove('modal__overlay--showed');
+    overlay.classList.remove('overlay--showed');
     closeCart.removeEventListener('click', CloseCartButton);
 });
+
 openCart.addEventListener('click', (event) => {
     event.preventDefault();
     cart.classList.add('shopping-cart--open');
-    overlay.classList.add('modal__overlay--showed');
+    overlay.classList.add('overlay--showed');
     closeCart.addEventListener('click', CloseCartButton);
+    overlay.addEventListener('click', CloseCartButton);
 });
 
 const editProductCount = (clone, product, operation = 'plus') => {
@@ -39,6 +40,7 @@ const editProductCount = (clone, product, operation = 'plus') => {
         cartCount.textContent = Number(cartCount.textContent) - 1;
     }
 }
+
 export const renderCart = (product) => {
     const data = getStorage('cart');
     

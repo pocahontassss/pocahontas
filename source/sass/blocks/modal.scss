@@ -1,56 +1,28 @@
 .modal {
-    &__overlay {
-        background: rgba(0, 0, 0, 0.7);
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 999;
-        width: 100%;
-        height: 100%;
-        display: none;
-        
-        &--showed {
-            display: block;
-        }
+    width: 300px;
+    border-radius: 15px;
+    box-shadow:  3px 2px 0px #00000005,
+    0px 7px 5px 0px #00000007,
+    0px 12px 10px 0px #00000009,
+    0px 22px 18px 0px #0000000B,
+    0px 42px 33px 0px #0000000D,
+    0px 100px 80px 0px #00000012;
+    padding: 20px 23px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FBFBFB;
+    z-index: 1000;
+    display: none;
+    
+    @media (min-width: 768px) {
+        width: 464px;
+        padding: 30px 40px;
     }
-       
-    &__container {
-        width: 300px;
-        border-radius: 15px;
-        box-shadow:  3px 2px 0px #00000005,
-        0px 7px 5px 0px #00000007,
-        0px 12px 10px 0px #00000009,
-        0px 22px 18px 0px #0000000B,
-        0px 42px 33px 0px #0000000D,
-        0px 100px 80px 0px #00000012;
-        padding: 20px 23px;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #FBFBFB;
-        z-index: 1000;
-        display: none;
-        
-        @media (min-width: 768px) {
-            width: 464px;
-            padding: 30px 40px;
-        }
-        
-        &--showed {
-            display: block;
-        }
-        
-        &--email {
-            padding: 55px 35px;
-            
-            @media (max-width: 767px) {
-                padding: 30px 18px;
-                min-height: 108px;
-            }
-        }
+    
+    &--showed {
+        display: block;
     }
     
     &__title {
@@ -129,5 +101,14 @@
         padding: 19px 13px;
         line-height: 14px;
         cursor: pointer;
+    }
+}
+
+#modal_email {
+    padding: 55px 35px;
+    
+    @media (max-width: 767px) {
+        padding: 30px 18px;
+        min-height: 108px;
     }
 }

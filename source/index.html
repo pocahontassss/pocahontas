@@ -433,25 +433,56 @@
     
     
     
-    <div class="modal">
-      <div class="modal__overlay overlay"></div>
+    <div class="modals">
+      <div class="overlay" id="modal_overlay"></div>
       
-      <div class="modal__container modal__container--add-product">
+      
+      <div class="modal" id="modal_add-product">
         <button type="button" class="modal__button-close">
           <img src="img/close_icon.svg" alt="Закрыть меню">
         </button>
         <h2 class="modal__title">Товар успешно<br>добавлен в корзину</h2>
         <button type="button" class="button modal__button">Продолжить покупки</button>
       </div>
-    
-      <div class="modal__container modal__container--email">
+      
+      
+      <div class="modal" id="modal_email">
         <button type="button" class="modal__button-close">
           <img src="img/close_icon.svg" alt="Закрыть меню">
         </button>
         <h2 class="modal__title modal__email-title">Проверьте ваш email и подтвердите подписку</h2>
       </div>
-    
-      <div class="shopping-cart">
+      
+      
+      <div class="modal checkOut" id="modal_checkOut">
+        <button type="button" class="modal__button-close">
+          <img src="img/close_icon.svg" alt="Закрыть меню">
+        </button>
+        <h2 class="modal__title checkOut__title">Для оформления заказа<br>укажите ваш номер телефона:</h2>
+        <form class="checkOut__form-wrapper">
+          <input type="tel" class="input" placeholder="Номер Телефона...">
+          <button type="submit" class="checkOut__button button button--blue ">Отправить</button>
+          <div class="checkOut__checkbox-wrapper">  
+            <input class="checkbox" type="checkbox">
+            <span class="checkbox__custom"></span>
+            <span class="checkOut__checkbox-text">Согласен с
+              <a href="#" class="checkOut__privacy">политикой конфиденциальности</a>
+            </span>
+          </div>
+        </form>
+      </div>
+      
+      
+      <div class="modal" id="modal_waiting">
+        <button type="button" class="modal__button-close">
+          <img src="img/close_icon.svg" alt="Закрыть меню">
+        </button>
+        <h2 class="modal__title modal__waiting-title">Заказ оформлен. Ожидайте звонка</h2>
+        <button type="button" class="button modal__button modal__waiting-button">Вернуться на главную</button>
+      </div>
+      
+      
+      <div class="shopping-cart" id="modal_shopping-cart">
         <h2 class="shopping-cart__title">Корзина Товаров</h2>
         <button type="button" class="shopping-cart__button-close">
           <img src="img/close_icon.svg" alt="Закрыть корзину">
@@ -478,42 +509,7 @@
         </div>
         <button class="shopping-cart__submit button button--red">Оформить заказ</button>
       </div>
-    
-      <div class="modal__container checkOut">
-        <button type="button" class="modal__button-close">
-          <img src="img/close_icon.svg" alt="Закрыть меню">
-        </button>
-        <h2 class="modal__title checkOut__title">Для оформления заказа<br>укажите ваш номер телефона:</h2>
-        <form class="checkOut__form-wrapper">
-          <input type="tel" class="input" placeholder="Номер Телефона...">
-          <button type="submit" class="modal__button checkOut__button button button--blue ">Отправить</button>
-          <div class="checkOut__checkbox-wrapper">  
-            <input class="checkbox" type="checkbox">
-            <span class="checkbox__custom"></span>
-            <span class="checkOut__checkbox-text">Согласен с
-              <a href="#" class="checkOut__privacy">политикой конфиденциальности</a>
-            </span>
-          </div>
-        </form>
-      </div>
-    
-      <div class="modal__container modal__container--waiting">
-        <button type="button" class="modal__button-close">
-          <img src="img/close_icon.svg" alt="Закрыть меню">
-        </button>
-        <h2 class="modal__title modal__waiting-title">Заказ оформлен. Ожидайте звонка</h2>
-        <button type="button" class="button modal__button modal__waiting-button">Вернуться на главную</button>
-      </div>
       
-    
-      
-      <div class="modal__container modal__container--hello">
-        <button type="button" class="modal__button-close">
-          <img src="img/close_icon.svg" alt="Закрыть меню">
-        </button>
-        <h2 class="modal__title">hello</h2>
-        <button type="button" class="button modal__button">world</button>
-      </div>
       
     </div>
     

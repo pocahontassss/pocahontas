@@ -1,24 +1,24 @@
-export const openModal = (modal /* идентификатор модального окна*/) => {
-    const modalClose = modal.querySelector('.modal__button-close'); /* Ищем кнопку закрытия в модалке */
-    const overlay = document.querySelector('.modal__overlay'); /* Ищем оверлей по документу */
-    const ResumeButton = modal.querySelector('.modal__button'); /* Ищем кнопку продолжить в модалке*/
+const closeModal = () => {
+    const overlay = document.getElementById('modal_overlay');
+    const modal = document.querySelector('.modal--showed');
     
-    modal.classList.add('modal__container--showed'); /* делаем модалку видимой */
-    overlay.classList.add('modal__overlay--showed'); /* делаем оверлей видимым */
-    overlay.addEventListener('click', closeModal); /* при клике на оверлей закрываем модалку */
-    modalClose.addEventListener('click', closeModal); /* при клике на кнопку закрываем модалку */
+    overlay.classList.remove('overlay--showed');
+    modal.classList.remove('modal--showed');
+}
+
+export const openModal = (event, modal) => {
+    event.preventDefault();
+    const modalClose = modal.querySelector('.modal__button-close');
+    const overlay = document.getElementById('modal_overlay');
+    const ResumeButton = modal.querySelector('.modal__button');
     
+    modal.classList.add('modal--showed');
+    overlay.classList.add('overlay--showed');
+    overlay.addEventListener('click', closeModal);
+    modalClose.addEventListener('click', closeModal);
+
     if (ResumeButton) {
-        ResumeButton.addEventListener('click', closeModal); /* при клике на кнопку продолжить закрываем модалку (если она существует) */
+        ResumeButton.addEventListener('click', closeModal);
     }
 }
-
-const closeModal = () => {
-    const overlay = document.querySelector('.modal__overlay'); /* ищем снова оверлей */
-    const modal = document.querySelector('.modal__container--showed'); /* ищем в документе активный класс modal__container--showed, а он один, потому что можно открыть только одну модалку */
-    
-    overlay.classList.remove('modal__overlay--showed'); /* делаем оверлей невидимым */
-    modal.classList.remove('modal__container--showed'); /* делаем модалку невидимой */
-}
-
 
