@@ -27,7 +27,7 @@
                 bottom: 0;
                 content: '';
                 z-index: 1;
-                filter: drop-shadow(0px -20px 94.5px #00000033);
+                filter: drop-shadow(0px -20px 94px #00000033);
             }
         }
             
@@ -46,7 +46,7 @@
                 left: -100px;
                 bottom: 0px;
                 content: '';
-                filter: drop-shadow(0px -20px 94.5px #00000033);
+                filter: drop-shadow(0px -20px 94px #00000033);
             }
         }
         
@@ -83,7 +83,9 @@
     }
     
     &__slider-box-arrow-icon-left {
-        background-image: url(../img/banner_arrow-left.svg);
+        @include clear-button;
+        
+        background-image: url(../img/arrow-slider.svg);
         background-repeat: no-repeat;
         position: absolute;
         width: 20px;
@@ -97,7 +99,10 @@
     }
     
     &__slider-box-arrow-icon-right {
-        background-image: url(../img/banner_arrow-right.svg);
+        @include clear-button;
+        
+        background-image: url(../img/arrow-slider.svg);
+        transform: rotate(180deg);
         background-repeat: no-repeat;
         position: absolute;
         width: 20px;

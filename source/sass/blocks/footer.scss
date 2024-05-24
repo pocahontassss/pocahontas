@@ -1,7 +1,7 @@
 .footer {
     &__container {
-        background-color: black;
-        color: white;
+        background-color: #000;
+        color: #fff;
         padding: 15px 10px 20px;
         
         @media (min-width: 768px) {
@@ -52,7 +52,7 @@
             display: block;
             width: 66px;
             height: 1px;
-            background-color: white;
+            background-color: #fff;
             margin: 9px;
             margin: 0 auto;
             transform: translateY(-38px);
@@ -69,7 +69,7 @@
     }
     
     &__subscribe {
-        background-color: white;
+        background-color: #fff;
         border-radius: 10px;
         width: 300px;
         height: 47px;
@@ -82,7 +82,7 @@
             content: '';
             width: 1px;
             height: 18px;
-            background-color: black;
+            background-color: #000;
             order: 1;
         }
         
@@ -119,6 +119,7 @@
         line-height: 17px;
         font-weight: 500;
         margin-left: 15px;
+        cursor: pointer;
         
         @media (min-width: 768px) {
             font-size: 18px;

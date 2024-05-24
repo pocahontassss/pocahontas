@@ -1,0 +1,40 @@
+.submit {
+    &__input {
+        border-radius: 10px;
+        border: solid 1px #DEDEDE;
+        padding: 15px;
+        height: 47px;
+        width: 254px;
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        
+        @media (min-width: 768px) {
+            width: 294px;
+        }
+        
+        &::placeholder {
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.7);
+        }
+        
+        &:focus {
+            outline: none;
+        } 
+    }
+    
+    &__button {
+        margin-top: 15px;
+        line-height: 22px;
+        order: 2;
+        
+        @media (min-width: 768px) {
+            width: 239px;
+            height: 47px;
+            font-size: 20px;
+            line-height: 14px;
+            margin: 0;
+        }
+    }
+}

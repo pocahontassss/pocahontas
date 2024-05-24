@@ -1,8 +1,10 @@
-import { getApi } from './getApi.js';
-import './addProduct.js';
-import './openMenu.js';
-import './modalEmail.js';
+import { getApi } from './api.js';
 import renderProducts from './renderProducts.js';
+import './cart.js';
+import './modalEmail.js';
+import './menu.js';
+import './headerScroll.js';
+import './modalAddProduct.js';
 
 const catalogList = document.querySelector('.best-selling__product-wrapper');
 const catalogItemTemplate = document.querySelector('#product').content;

@@ -27,7 +27,7 @@
             display: inline-block;
             width: 47px;
             height: 3px;
-            background-color: black;
+            background-color: #000;
             margin-right: 22px;
             transform: translateY(-6px);
             content: '';
@@ -73,11 +73,11 @@
     }
     
     &__show-all {
-        box-shadow: 0px 2.77px 2.21px 0px #00000005,
-        0px 6.65px 5.32px 0px #00000007,
-        0px 12.52px 10.02px 0px #00000009,
-        0px 22.34px 17.87px 0px #0000000B,
-        0px 41.78px 33.42px 0px #0000000D,
+        box-shadow: 0px 3px 2px 0px #00000005,
+        0px 7px 5px 0px #00000007,
+        0px 12px 10px 0px #00000009,
+        0px 22px 18px 0px #0000000B,
+        0px 42px 33px 0px #0000000D,
         0px 100px 80px 0px #00000012;
         margin: 0 auto;
         
@@ -116,10 +116,11 @@
     }
 
     &__slider-box-arrow-icon-left {
+        @include clear-button;
         
         @media (min-width: 768px) {
         position: absolute;
-        background-image: url("../img/popular_arrow-left.svg");
+        background-image: url("../img/arrow-slider.svg");
         background-repeat: no-repeat;
         width: 15px;
         height: 27px;
@@ -134,10 +135,12 @@
     }
     
     &__slider-box-arrow-icon-right {
+        @include clear-button;
         
         @media (min-width: 768px) {
         position: absolute;
-        background-image: url("../img/popular_arrow-right.svg");
+        background-image: url("../img/arrow-slider.svg");
+        transform: rotate(180deg);
         background-repeat: no-repeat;
         width: 15px;
         height: 27px;

@@ -1,22 +1,32 @@
 .header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    background-color: #fff ;
+    z-index: 3;
+    padding-bottom: 5px;
+    
     
     @media (min-width:1728px) {
-        position: absolute;
-        z-index: 5;
-        width: 100%;
+        background-color: transparent;
+    }
+    
+    &--scroll {
+        border-bottom: #dedede 1px solid;
+        background-color: #fff;
     }
     
     &__container {
         display: flex;
         align-items: center;
-        margin-top: 15px;
+        padding-top: 15px;
         
         @media (min-width: 768px) {
             margin-top: 21px;
         }
         
         @media (min-width: 1728px) {
-            margin-top: 77px;
+            margin-top: 62px;
         }
     }
     
@@ -67,6 +77,7 @@
         position: absolute;
         right: 14px;
         top: 20px;
+        cursor: pointer;
         
         img {
             height: 12px;
@@ -83,7 +94,7 @@
             right: 0;
             width: 55%;
             height: 100vh;
-            z-index: 303;
+            z-index: 1000;
         }
         
         @media (min-width: 768px) {
@@ -94,12 +105,12 @@
             display: flex;
             flex-direction: column;
             background-color: #EBEBEB;
-            box-shadow: 0px 2.32px 1.97px 0px #00000006,
-            0px 5.39px 4.58px 0px #00000009,
-            0px 9.68px 8.22px 0px #0000000B,
-            0px 16.06px 13.65px 0px #0000000C,
-            0px 26.45px 22.49px 0px #0000000E,
-            0px 46.23px 39.3px 0px #00000011,
+            box-shadow: 0px 2px 2px 0px #00000006,
+            0px 5px 5px 0px #00000009,
+            0px 10px 8px 0px #0000000B,
+            0px 16px 13px 0px #0000000C,
+            0px 26px 22px 0px #0000000E,
+            0px 46px 39px 0px #00000011,
             0px 100px 85px 0px #00000017;
             
             .header__contacts {
@@ -142,8 +153,26 @@
         }
     }
     
-    &__button {
+    &__search {
         @include clear-button;
+        
+        cursor: pointer;
+        
+        img {
+            @media (min-width: 768px) {
+                width: 29px;
+                height: 27px;
+            }
+            
+            @media (min-width: 1728px) {
+                width: 31px;
+                height: 26px;
+            }
+        }
+    }
+    
+    &__basket {  
+        cursor: pointer;
         
         img {
             @media (min-width: 768px) {
@@ -161,6 +190,7 @@
     &__burger {
         @include clear-button;
         
+        cursor: pointer;
         margin-left: 28px;
         
         @media (min-width: 768px) {
@@ -188,7 +218,7 @@
         display: flex;
         gap: 28px;
         margin-left: auto;
-        
+
         @media (min-width: 768px) {
             gap: 44px;
             margin-left: 122px;
@@ -212,6 +242,7 @@
         padding: 1px 4px;
         top: -4px;
         right: -4px;
+        cursor: pointer;
         
         @media (min-width: 768px) {
             font-size: 11px;

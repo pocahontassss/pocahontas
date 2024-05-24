@@ -1,0 +1,43 @@
+.checkbox {
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    position: absolute;
+    left: 25px;
+    z-index: 2;
+    cursor: pointer;
+    
+    &__custom {
+        width: 19px;
+        height: 17px;
+        border-radius: 5px;
+        border: solid 1px #DEDEDE;
+        background-color: #fff;
+        position: relative;
+        
+        @media (min-width: 768px) {
+            width: 17px;
+            height: 17px;
+        }
+        
+        &::before {
+            content: '';
+            display: inline-block;
+            background-image: url("../img/black-checkmark.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            left: 55%;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            margin-bottom: 2px;
+            transition: 0.1s ease-in;
+        }
+        
+        .checkbox:checked + &::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+}
