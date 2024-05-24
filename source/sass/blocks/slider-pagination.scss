@@ -10,6 +10,7 @@
         width: 11px;
         height: 11px;
         border-radius: 50%;
+        transition: width 0.3s;
         
         &--big {
             width: 30px;
@@ -17,7 +18,9 @@
         }
     }
     
-    &--white button {
-        background-color: #fff;
+    &--white {
+        .slider-pagination__button {
+            background-color: #fff;
+        }
     }
 }

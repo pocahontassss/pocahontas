@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ваш проект</title>
+    <title>Sneakers Shop</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -166,7 +167,8 @@
           <p class="popular__description">Посмотрите, что чаще всего покупают у нас</p>
           <a href="#" class="popular__show-all popular__show-all--tablet show-all button">Показать Все</a>
         </div>
-        <div class="popular__slider-box">
+        
+        <div class="popular__swiper">
           <ul class="popular__product-list">
             
             <li class="product-card product-card--popular">
@@ -197,118 +199,100 @@
             </li>
             
           </ul>
-          <div class="popular__slider slider-pagination">
+          
+          <div class="popular__slider-pagination slider-pagination">
             <button type="button" class="slider-pagination__button"></button>
             <button type="button" class="slider-pagination__button slider-pagination__button--big "></button>
             <button type="button" class="slider-pagination__button"></button>
           </div>
           
-          <button type="button" class="popular__slider-box-arrow-icon-left"></button>
-          <button type="button" class="popular__slider-box-arrow-icon-right"></button>
+          <button type="button" class="popular__arrow popular__arrow--left"></button>
+          <button type="button" class="popular__arrow popular__arrow--right"></button>
           
         </div>
          <a href="#" class="popular__show-all popular__show-all--mobile show-all button">Показать Все</a>
       </div>
     </section>
     
-    
-    
     <section class="banners">
-      <ul class="banners__list">
-        <li class="banners__item">
-          <div class="banners__container container">
-            <div class="banners__slider">
-                
-                <div class="banners__box banner">
-                  <h2 class="banner__title">Ты готов<br>проложить свой путь?</h2>
-                  <a href="#" class="banner__button button--white">См Все</a>
-                  <div class="banner__sneakershoe-wrapper">
-                    <a href="#" class="banner__sneakershoe">
-                      <img class="banner__sneakershoe-img" src="img/sneakershoe_banner-first.png" alt="Sneakershoe">
-                    </a>
-                    <a href="#" class="banner__sneakershoe">
-                      <img class="banner__sneakershoe-img" src="img/sneakershoe_banner-second.png" alt="Sneakershoe">
-                    </a>
-                    <a href="#" class="banner__sneakershoe">
-                      <img class="banner__sneakershoe-img" src="img/sneakershoe_banner-third.png" alt="Sneakershoe">
-                    </a>
+      <div class="container">
+        <div class="banners__swiper">
+          <div class="banners__pagination slider-pagination slider-pagination--white"></div>
+          <button type="button" class="banners__arrow banners__arrow--left"></button>
+          <button type="button" class="banners__arrow banners__arrow--right"></button>
+
+          <ul class="banners__list swiper-wrapper">
+            
+            <li class="banners__item swiper-slide">
+              <div class="banners__container">
+                <div class="banners__slider">
+                  <div class="banners__box banner">
+                    <h2 class="banner__title">Ты готов<br>проложить свой путь?</h2>
+                    <a href="#" class="banner__button button button--white">См Все</a>
+                    <div class="banner__sneakershoe-wrapper">
+                      <a href="#" class="banner__sneakershoe">
+                        <img class="banner__sneakershoe-img" src="img/sneakershoe_banner-first.png" alt="Sneakershoe">
+                      </a>
+                      <a href="#" class="banner__sneakershoe">
+                        <img class="banner__sneakershoe-img" src="img/sneakershoe_banner-second.png" alt="Sneakershoe">
+                      </a>
+                      <a href="#" class="banner__sneakershoe">
+                        <img class="banner__sneakershoe-img" src="img/sneakershoe_banner-third.png" alt="Sneakershoe">
+                      </a>
+                    </div>
                   </div>
                 </div>
-              
-              <div class="banners__slider-wrapper slider-pagination slider-pagination--white">
-                <button type="button" class="slider-pagination__button"></button>
-                <button type="button" class="slider-pagination__button slider-pagination__button--big "></button>
-                <button type="button" class="slider-pagination__button"></button>
               </div>
-            </div>
-            <button type="button" class="banners__slider-box-arrow-icon-left"></button>
-            <button type="button" class="banners__slider-box-arrow-icon-right"></button>
-          </div>
-        </li>
-      
-        <li class="banners__item">
-          <div class="banners__container banners__container--blue container">
-            <div class="banners__slider">
-                
-                <div class="banners__box banner">
-                  <h2 class="banner__title">Ты готов<br>проложить свой путь?</h2>
-                  <a href="#" class="banner__button button--white">См Все</a>
-                  <div class="banner__sneakershoe-wrapper">
-                    <a href="#" class="banner__sneakershoe">
-                      <img class="banner__sneakershoe-img" src="img/sneakershoe_banner-first.png" alt="Sneakershoe">
-                    </a>
-                    <a href="#" class="banner__sneakershoe">
-                      <img class="banner__sneakershoe-img" src="img/sneakershoe_banner-second.png" alt="Sneakershoe">
-                    </a>
-                    <a href="#" class="banner__sneakershoe">
-                      <img class="banner__sneakershoe-img" src="img/sneakershoe_banner-third.png" alt="Sneakershoe">
-                    </a>
-                  </div>
+            </li>
+
+            <li class="banners__item swiper-slide">
+              <div class="banners__container banners__container--blue">
+                <div class="banners__slider">
+                    <div class="banners__box banner">
+                      <h2 class="banner__title">Ты готов<br>проложить свой путь?</h2>
+                      <a href="#" class="banner__button button button--white">См Все</a>
+                      <div class="banner__sneakershoe-wrapper">
+                        <a href="#" class="banner__sneakershoe">
+                          <img class="banner__sneakershoe-img" src="img/sneakershoe_banner-first.png" alt="Sneakershoe">
+                        </a>
+                        <a href="#" class="banner__sneakershoe">
+                          <img class="banner__sneakershoe-img" src="img/sneakershoe_banner-second.png" alt="Sneakershoe">
+                        </a>
+                        <a href="#" class="banner__sneakershoe">
+                          <img class="banner__sneakershoe-img" src="img/sneakershoe_banner-third.png" alt="Sneakershoe">
+                        </a>
+                      </div>
+                    </div>
                 </div>
-              
-              <div class="banners__slider-wrapper slider-pagination slider-pagination--white">
-                <button type="button" class="slider-pagination__button"></button>
-                <button type="button" class="slider-pagination__button slider-pagination__button--big "></button>
-                <button type="button" class="slider-pagination__button"></button>
               </div>
-            </div>
-            <button type="button" class="banners__slider-box-arrow-icon-left"></button>
-            <button type="button" class="banners__slider-box-arrow-icon-right"></button>
-          </div>
-        </li>
-        
-        <li class="banners__item">
-          <div class="banners__container banners__container--green container">
-            <div class="banners__slider">
-                
-                <div class="banners__box banner">
-                  <h2 class="banner__title">Ты готов<br>проложить свой путь?</h2>
-                  <a href="#" class="banner__button button--white">См Все</a>
-                  <div class="banner__sneakershoe-wrapper">
-                    <a href="#" class="banner__sneakershoe">
-                      <img class="banner__sneakershoe-img" src="img/sneakershoe_banner-first.png" alt="Sneakershoe">
-                    </a>
-                    <a href="#" class="banner__sneakershoe">
-                      <img class="banner__sneakershoe-img" src="img/sneakershoe_banner-second.png" alt="Sneakershoe">
-                    </a>
-                    <a href="#" class="banner__sneakershoe">
-                      <img class="banner__sneakershoe-img" src="img/sneakershoe_banner-third.png" alt="Sneakershoe">
-                    </a>
-                  </div>
+            </li>
+
+            <li class="banners__item swiper-slide">
+              <div class="banners__container banners__container--green">
+                <div class="banners__slider">
+                    <div class="banners__box banner">
+                      <h2 class="banner__title">Ты готов<br>проложить свой путь?</h2>
+                      <a href="#" class="banner__button button button--white">См Все</a>
+                      <div class="banner__sneakershoe-wrapper">
+                        <a href="#" class="banner__sneakershoe">
+                          <img class="banner__sneakershoe-img" src="img/sneakershoe_banner-first.png" alt="Sneakershoe">
+                        </a>
+                        <a href="#" class="banner__sneakershoe">
+                          <img class="banner__sneakershoe-img" src="img/sneakershoe_banner-second.png" alt="Sneakershoe">
+                        </a>
+                        <a href="#" class="banner__sneakershoe">
+                          <img class="banner__sneakershoe-img" src="img/sneakershoe_banner-third.png" alt="Sneakershoe">
+                        </a>
+                      </div>
+                    </div>
                 </div>
-              
-              <div class="banners__slider-wrapper slider-pagination slider-pagination--white">
-                <button type="button" class="slider-pagination__button"></button>
-                <button type="button" class="slider-pagination__button slider-pagination__button--big "></button>
-                <button type="button" class="slider-pagination__button"></button>
               </div>
-            </div>
-            <button type="button" class="banners__slider-box-arrow-icon-left"></button>
-            <button type="button" class="banners__slider-box-arrow-icon-right"></button>
-          </div>
-        </li>
-      </ul>
-    </section>
+            </li>
+            
+          </ul>
+        </div>
+      </section>
+
     
     
     
