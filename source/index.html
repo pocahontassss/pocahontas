@@ -168,37 +168,51 @@
           <a href="#" class="popular__show-all popular__show-all--tablet show-all button">Показать Все</a>
         </div>
         
-        <div class="popular__swiper">
-          <ul class="popular__product-list">
+        <button type="button" class="popular__arrow popular__arrow--left"></button>
+        
+        <div class="popular__swiper-container">
+          <div class="popular__swiper">
+            <ul class="popular__product-list swiper-wrapper">
+              
+              <li class="product-card product-card--popular swiper-slide">
+                <img class="product-card__img product-card__img--popular" src="img/popular_sneakershoe.png" alt="Running sport shoe">
+                <h3 class="product-card__name">Running sport shoe</h3>
+                <div class="product-card__price-wrapper">
+                  <span class="product-card__price product-card__price--popular">3999 ₽</span>
+                  <button type="button" class="product-card__arrow-icon product-card__arrow-icon--popular button"></button>
+                </div>
+              </li>
+              
+              <li class="product-card product-card--popular swiper-slide">
+                <img class="product-card__img product-card__img--popular" src="img/popular_sneakershoe-second.png" alt="Running sport shoe">
+                <h3 class="product-card__name">Running sport shoe</h3>
+                <div class="product-card__price-wrapper">
+                  <span class="product-card__price product-card__price--popular">3999 ₽</span>
+                  <button type="button" class="product-card__arrow-icon product-card__arrow-icon--popular button"></button>
+                </div>
+              </li>
+              
+              <li class="product-card product-card--popular swiper-slide">
+                <img class="product-card__img product-card__img--popular" src="img/popular_sneakershoe-third.png" alt="Running sport shoe">
+                <h3 class="product-card__name">Running sport shoe</h3>
+                <div class="product-card__price-wrapper">
+                  <span class="product-card__price product-card__price--popular">3999 ₽</span>
+                  <button type="button" class="product-card__arrow-icon product-card__arrow-icon--popular button"></button>
+                </div>
+              </li>
+              
+              <li class="product-card product-card--popular swiper-slide">
+                <img class="product-card__img product-card__img--popular" src="img/white-snakes-preview.png" height="250px" alt="Running sport shoe">
+                <h3 class="product-card__name">Running sport shoe</h3>
+                <div class="product-card__price-wrapper">
+                  <span class="product-card__price product-card__price--popular">3999 ₽</span>
+                  <button type="button" class="product-card__arrow-icon product-card__arrow-icon--popular button"></button>
+                </div>
+              </li>
+              
+            </ul>
             
-            <li class="product-card product-card--popular">
-              <img class="product-card__img product-card__img--popular" src="img/popular_sneakershoe.png" alt="Running sport shoe">
-              <h3 class="product-card__name">Running sport shoe</h3>
-              <div class="product-card__price-wrapper">
-                <span class="product-card__price product-card__price--popular">3999 ₽</span>
-                <button type="button" class="product-card__arrow-icon product-card__arrow-icon--popular button"></button>
-              </div>
-            </li>
-            
-            <li class="product-card product-card--popular">
-              <img class="product-card__img product-card__img--popular" src="img/popular_sneakershoe-second.png" alt="Running sport shoe">
-              <h3 class="product-card__name">Running sport shoe</h3>
-              <div class="product-card__price-wrapper">
-                <span class="product-card__price product-card__price--popular">3999 ₽</span>
-                <button type="button" class="product-card__arrow-icon product-card__arrow-icon--popular button"></button>
-              </div>
-            </li>
-            
-            <li class="product-card product-card--popular">
-              <img class="product-card__img product-card__img--popular" src="img/popular_sneakershoe-third.png" alt="Running sport shoe">
-              <h3 class="product-card__name">Running sport shoe</h3>
-              <div class="product-card__price-wrapper">
-                <span class="product-card__price product-card__price--popular">3999 ₽</span>
-                <button type="button" class="product-card__arrow-icon product-card__arrow-icon--popular button"></button>
-              </div>
-            </li>
-            
-          </ul>
+          </div>
           
           <div class="popular__slider-pagination slider-pagination">
             <button type="button" class="slider-pagination__button"></button>
@@ -206,13 +220,14 @@
             <button type="button" class="slider-pagination__button"></button>
           </div>
           
-          <button type="button" class="popular__arrow popular__arrow--left"></button>
-          <button type="button" class="popular__arrow popular__arrow--right"></button>
-          
         </div>
-         <a href="#" class="popular__show-all popular__show-all--mobile show-all button">Показать Все</a>
+        <button type="button" class="popular__arrow popular__arrow--right"></button>
+      
+        <a href="#" class="popular__show-all popular__show-all--mobile show-all button">Показать Все</a>
       </div>
     </section>
+    
+    
     
     <section class="banners">
       <div class="container">

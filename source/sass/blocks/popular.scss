@@ -1,17 +1,14 @@
 .popular {
-    
     &__container {
         margin-top: 57px;
+        position: relative;
         
         @media (min-width: 768px) {
             display: flex;
-            justify-content: center;
-            gap: 87px;
             margin-top: 93px;
         }
         
         @media (min-width: 1728px) {
-            gap: 144px;
             margin-top: 159px;
         }
     }
@@ -36,17 +33,6 @@
     
     &__product-list {
         @include clear-list;
-        
-        margin-bottom: 18px;
-        
-        @media (min-width: 768px) {
-            margin-bottom: 30px;
-        }
-        
-        @media (min-width: 1728px) {
-            display: flex;
-            gap: 67px;
-        }
     }
     
     &__text {
@@ -69,6 +55,10 @@
         
         @media (min-width: 768px) {
             max-width: 290px;
+        }
+        
+        @media (min-width: 1728px) {
+            margin-right: 48px;
         }
     }
     
@@ -108,40 +98,68 @@
     }
     
     &__slider-pagination {
+        
+        @media (max-width: 767px) {
         margin-bottom: 30px;
+        margin-top: 18px;
+        }
+        
+        @media (min-width: 768px) {
+            margin-top: 30px;
+        }
+        
+        @media (min-width: 1728px) {
+            margin-top: 50px;
+        }
     }
     
     &__swiper {
-        position: relative;
+        overflow: hidden;
+        border-radius: 25px;
+    }
+    
+    &__swiper-container {
+        width: 100%;
+        
+        @media (min-width: 768px) {
+            min-width: 300px;
+        }
     }
 
     &__arrow {
         @include clear-button;
         
         @media (min-width: 768px) {
-        position: absolute;
-        background-image: url("../img/arrow-slider.svg");
+        background-image: url("../img/popular-arrow-slider.svg");
         background-repeat: no-repeat;
-        width: 15px;
+        width: 40px;
         height: 27px;
-        top: 184px;
-        left: -35px;
+        align-self: center;
+        cursor: pointer;
         }
         
-        @media (min-width: 1728px) {
-            left: -50px;
-        }
-    
         &--right {
             
             @media (min-width: 768px) {
             transform: rotate(180deg);
-            left: auto;
-            right: -35px;
+            margin-left: 21px;
             }
             
             @media (min-width: 1728px) {
-                right: -50px;
+                transform: rotate(180deg);
+                margin-left: 50px;
+                }
+        }
+        
+        &--left {
+            
+            @media (min-width: 768px) {
+                margin-right: 21px;
+                margin-left: 31px;
+            }
+            
+            @media (min-width: 1728px) {
+                margin-right: 50px;
             }
         }
     }

@@ -17,6 +17,7 @@
         overflow: hidden;
         margin-top: -210px;
         padding-top: 210px;
+        border-radius: 30px;
     }
 
     &__container {
@@ -115,7 +116,7 @@
         @include clear-button;
         
         @media (min-width: 768px) {
-        background-image: url(../img/arrow-slider.svg);
+        background-image: url(../img/banner-arrow-slider.svg);
         background-repeat: no-repeat;
         position: absolute;
         width: 20px;
