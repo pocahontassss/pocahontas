@@ -5,6 +5,8 @@ import './modalEmail.js';
 import './menu.js';
 import './headerScroll.js';
 import './modalAddProduct.js';
+import './modalError.js';
+import './sliders.js';
 
 const catalogList = document.querySelector('.best-selling__product-wrapper');
 const catalogItemTemplate = document.querySelector('#product').content;

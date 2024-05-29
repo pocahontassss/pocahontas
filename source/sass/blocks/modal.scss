@@ -44,6 +44,22 @@
         }
     }
     
+    &__text {
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-weight: 500;
+        
+        @media (min-width: 768px) {
+            font-size: 20px;
+            line-height: 24px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+    }
+    
     &__button {
         width: 254px;
         height: 48px;
@@ -110,5 +126,11 @@
     @media (max-width: 767px) {
         padding: 30px 18px;
         min-height: 108px;
+    }
+}
+
+#modal_error {
+    .modal__title {
+        margin-bottom: 0;
     }
 }
