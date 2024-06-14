@@ -1,8 +1,8 @@
-import { openModal } from "./modal.js"; 
+import { Modal } from "./modal.js"; 
 
 const modalOpen = document.querySelector('.footer__button-subscribe');
-const modalEmail = document.getElementById('modal_email');
+const modalEmail = new Modal('modal_email');
 
 modalOpen.addEventListener('click', (event) => {
-  openModal(event, modalEmail);
+  modalEmail.openModal(event);
 });
