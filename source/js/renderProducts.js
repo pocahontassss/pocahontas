@@ -1,7 +1,7 @@
-import { openModal } from "./modal.js";
 import { addToStorage } from "./storage.js";
 import { renderCart } from "./cart.js";
 import { editCartCount } from "./cart.js"; 
+import { Modal } from "./modal.js"; 
 
 export default (products, template, target, isTargetList = false, templateClass = '') => {
     const fragment = document.createDocumentFragment();
@@ -30,8 +30,8 @@ export default (products, template, target, isTargetList = false, templateClass 
         const { id, name, image, price, oldPrice, status = '', isBig = ''} = product;
         
         button.addEventListener('click', (event) => {
-            const modal = document.getElementById('modal_add-product');
-            openModal(event, modal);
+            const modal = new Modal('modal_add-product');
+            modal.openModal(event);
             addToStorage('cart', product);
             renderCart();
             editCartCount();
