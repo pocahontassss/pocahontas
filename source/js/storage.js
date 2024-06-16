@@ -1,33 +1,40 @@
-const getStorage = (storageName) => {
-    return JSON.parse(localStorage.getItem(storageName));
-};
-
-const addToStorage = (storageName, data) => {
-    let storageArr = [data];
-    const storageData = JSON.parse(localStorage.getItem(storageName));
-
-    if(storageData) {
-
-        storageArr = [...storageData, ...storageArr];
+export class Storage {
+    
+    constructor(storageName, data, id) {
+        this.storageName = storageName;
+        this.storageArr = [data];
+        this.id = id;
     }
-    localStorage.setItem(storageName, JSON.stringify(storageArr));
-};
-
-const removeFromStorage = (storageName, id) => {
-    const storageData = JSON.parse(localStorage.getItem(storageName));
-
-    if(!storageData) {
-        return;
+    
+    getStorage(storageName) {
+        return JSON.parse(localStorage.getItem(storageName));
     }
-
-    storageData.splice(storageData.map(el => el.id).indexOf(id), 1);
-
-    if(!storageData.length) {
-        localStorage.removeItem(storageName);
-        return;
+    
+    addToStorage(storageName, data) {
+        let storageArr = [data];
+        const storageData = JSON.parse(localStorage.getItem(storageName));
+    
+        if(storageData) {
+            
+            storageArr = [...storageData, ...storageArr];
+        }
+        localStorage.setItem(storageName, JSON.stringify(storageArr));
     }
+    
+    removeFromStorage(storageName, id) {
+        const storageData = JSON.parse(localStorage.getItem(storageName));
 
-    localStorage.setItem(storageName, JSON.stringify(storageData));
-};
+        if(!storageData) {
+            return;
+        }
 
-export {getStorage, addToStorage, removeFromStorage};
+        storageData.splice(storageData.map(el => el.id).indexOf(id), 1);
+
+        if(!storageData.length) {
+            localStorage.removeItem(storageName);
+            return;
+        }
+
+        localStorage.setItem(storageName, JSON.stringify(storageData));
+    }
+}
