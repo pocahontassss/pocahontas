@@ -32,7 +32,7 @@ export default (products, template, target, isTargetList = false, templateClass 
         button.addEventListener('click', (event) => {
             const modal = new Modal('modal_add-product');
             modal.openModal(event);
-            const storage = new Storage ();
+            const storage = new Storage();
             storage.addToStorage('cart', product);
             renderCart();
             editCartCount();

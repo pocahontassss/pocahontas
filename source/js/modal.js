@@ -10,7 +10,7 @@ export class Modal {
     }
     
     static modalCloseAll () {
-        Modal.modals.forEach(modal => {
+        this.modals.forEach(modal => {
             if (!modal.classList.contains('modal--showed')) {
                 modal.classList.remove('modal--showed');
                 Modal.overlay.classList.remove('overlay--showed');

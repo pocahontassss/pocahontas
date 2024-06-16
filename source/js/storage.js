@@ -1,11 +1,5 @@
 export class Storage {
     
-    constructor(storageName, data, id) {
-        this.storageName = storageName;
-        this.storageArr = [data];
-        this.id = id;
-    }
-    
     getStorage(storageName) {
         return JSON.parse(localStorage.getItem(storageName));
     }

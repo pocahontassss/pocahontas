@@ -6,7 +6,7 @@ const cart = document.querySelector('.shopping-cart');
 const openCart = document.querySelector('.header__basket');
 const closeCart = cart.querySelector('.shopping-cart__button-close');
 const overlay = document.getElementById('modal_overlay');
-const storage = new Storage ();
+const storage = new Storage();
 
 const CloseCartButton = ('click', () => {
     cart.classList.remove('shopping-cart--open');
