@@ -1,4 +1,4 @@
-import { addToStorage } from "./storage.js";
+import { Storage } from "./storage.js";
 import { renderCart } from "./cart.js";
 import { editCartCount } from "./cart.js"; 
 import { Modal } from "./modal.js"; 
@@ -32,7 +32,8 @@ export default (products, template, target, isTargetList = false, templateClass 
         button.addEventListener('click', (event) => {
             const modal = new Modal('modal_add-product');
             modal.openModal(event);
-            addToStorage('cart', product);
+            const storage = new Storage();
+            storage.addToStorage('cart', product);
             renderCart();
             editCartCount();
         });

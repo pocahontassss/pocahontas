@@ -1,4 +1,4 @@
-import { addToStorage, getStorage, removeFromStorage } from './storage.js';
+import { Storage } from './storage.js';
 import formatPrice from './formatPrice.js';
 import './modalcheckOut.js';
 
@@ -6,6 +6,7 @@ const cart = document.querySelector('.shopping-cart');
 const openCart = document.querySelector('.header__basket');
 const closeCart = cart.querySelector('.shopping-cart__button-close');
 const overlay = document.getElementById('modal_overlay');
+const storage = new Storage();
 
 const CloseCartButton = ('click', () => {
     cart.classList.remove('shopping-cart--open');
@@ -42,7 +43,7 @@ const editProductCount = (clone, product, operation = 'plus') => {
 }
 
 export const renderCart = (product) => {
-    const data = getStorage('cart');
+    const data = storage.getStorage('cart');
     
         if(!data?.length) {
             return;
@@ -78,14 +79,14 @@ export const renderCart = (product) => {
             if (clone.querySelector('.shopping-cart__input').value <= 0) {
                 clone.querySelector('.shopping-cart__input').value = 0;
             } else {
-            removeFromStorage('cart', product.id);
+            storage.removeFromStorage('cart', product.id);
             editProductCount(clone, product, 'minus');
             editCartCount();
             };
         })
 
         clone.querySelector('.shopping-cart__button--plus').addEventListener('click', () => {
-            addToStorage('cart', product);
+            storage.addToStorage('cart', product);
             editProductCount(clone, product, 'plus');
             editCartCount();
         })
@@ -106,7 +107,7 @@ const cartCount = document.querySelector('.header__number-basket');
 const totalEl = document.querySelector('.shopping-cart__total span');
 
 export const editCartCount = () => {
-    const data = getStorage('cart');  
+    const data = storage.getStorage('cart');  
     totalEl.textContent = data?.length || 0;
     cartCount.textContent = totalEl.textContent;
 };
