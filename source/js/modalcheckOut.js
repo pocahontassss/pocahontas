@@ -16,3 +16,4 @@ let reg = /[A-Za-zА-Яа-яЁё]/g;
 input.oninput = function() {
   this.value = this.value.replace(reg, '');
 }
+

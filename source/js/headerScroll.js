@@ -1,4 +1,4 @@
-window.addEventListener('scroll', function() {
+function checkScrollPosition() {
     let header = document.querySelector('.header');
     let scrollPosition = window.scrollY;
     let scrollThreshold;
@@ -16,4 +16,13 @@ window.addEventListener('scroll', function() {
     } else {
         header.classList.remove('header--scroll');
     }
+    
+    sessionStorage.setItem('scrollPosition', scrollPosition);
+}
+
+window.addEventListener('scroll', checkScrollPosition);
+
+// Проверка положения экрана сразу после загрузки страницы
+window.addEventListener('DOMContentLoaded', function() {
+    checkScrollPosition();
 });
