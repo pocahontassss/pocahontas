@@ -22,10 +22,11 @@ openCart.addEventListener('click', (event) => {
     overlay.addEventListener('click', CloseCartButton);
 });
 
+const totalEl = document.querySelector('.shopping-cart__total span');
+const totalPriceEl = document.querySelector('.shopping-cart__total-price');
+
 const editProductCount = (clone, product, operation = 'plus') => {
     const input = clone.querySelector('.shopping-cart__input').value;
-    const totalEl = document.querySelector('.shopping-cart__total span');
-    const totalPriceEl = document.querySelector('.shopping-cart__total-price');
     
     const totalPrice = Number(totalPriceEl.textContent.replace(/\D/g, ''));
     if (operation === 'plus') {
@@ -41,6 +42,36 @@ const editProductCount = (clone, product, operation = 'plus') => {
         cartCount.textContent = Number(cartCount.textContent) - 1;
     }
 }
+
+const updateProductCount = (clone, product) => {
+    const input = clone.querySelector('.shopping-cart__input');
+
+    input.addEventListener('input', () => {
+        let newCount = Number(input.value);
+
+        const cartData = storage.getStorage('cart') || [];
+        const currentCount = cartData.filter(item => item.id === product.id).length;
+
+        if (newCount > currentCount) {
+            for (let i = currentCount; i < newCount; i++) {
+                storage.addToStorage('cart', product);
+            }
+        } else if (newCount < currentCount) {
+            for (let i = currentCount; i > newCount; i--) {
+                storage.removeFromStorage('cart', product.id);
+            }
+        }
+
+        const updatedCartData = storage.getStorage('cart') || [];
+        const updatedCount = updatedCartData.filter(item => item.id === product.id).length;
+
+        input.value = updatedCount;
+        totalEl.textContent = updatedCartData.length;
+        totalPriceEl.textContent = formatPrice(updatedCartData.reduce((acc, curr) => acc + Number(curr.price), 0));
+        clone.querySelector('.shopping-cart__price').textContent = `${formatPrice(updatedCount * product.price)}`;
+        editCartCount();
+    });
+};
 
 export const renderCart = (product) => {
     const data = storage.getStorage('cart');
@@ -82,6 +113,7 @@ export const renderCart = (product) => {
             storage.removeFromStorage('cart', product.id);
             editProductCount(clone, product, 'minus');
             editCartCount();
+            clone.querySelector('.shopping-cart__price').textContent = `${formatPrice(clone.querySelector('.shopping-cart__input').value * product.price)}`;
             };
         })
 
@@ -89,10 +121,14 @@ export const renderCart = (product) => {
             storage.addToStorage('cart', product);
             editProductCount(clone, product, 'plus');
             editCartCount();
+            clone.querySelector('.shopping-cart__price').textContent = `${formatPrice(clone.querySelector('.shopping-cart__input').value * product.price)}`;
+            
         })
         
-        fragment.append(clone);
+        clone.querySelector('.shopping-cart__price').textContent = `${formatPrice(clone.querySelector('.shopping-cart__input').value * product.price)}`;
         
+        updateProductCount(clone, product);
+        fragment.append(clone);
     });
     
     targetEl.append(fragment);
@@ -104,7 +140,6 @@ export const renderCart = (product) => {
 renderCart();
 
 const cartCount = document.querySelector('.header__number-basket');
-const totalEl = document.querySelector('.shopping-cart__total span');
 
 export const editCartCount = () => {
     const data = storage.getStorage('cart');  
