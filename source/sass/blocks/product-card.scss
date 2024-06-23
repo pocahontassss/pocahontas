@@ -150,6 +150,10 @@
         display: block;
         margin: 0 auto;
         
+        @media (min-width: 650px) and (max-width: 767px) {
+            transform: scale(1.3);
+        }
+        
         @media (min-width: 1728px) {
             width: 363px;
         }
@@ -171,6 +175,10 @@
         font-weight: 500;
         margin-top: 0;
         margin-bottom: 22px;
+        
+        @media (max-width: 767px) {
+            max-width: 260px;
+        }
     }
     
     &__price-wrapper {

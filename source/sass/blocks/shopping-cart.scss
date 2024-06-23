@@ -116,7 +116,6 @@
         &__item {
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: space-between;
                 align-items: center;
                 border-top: 2px solid #DEDEDE;
                 
@@ -152,6 +151,7 @@
                         line-height: 25px;
                         margin-top: 16px;
                         margin-bottom: 16px;
+                        max-width: 200px;
                 }
         }
         
@@ -168,6 +168,7 @@
                 font-size: 24px;
                 line-height: 29px;
                 font-weight: 500;
+                margin-left: auto;
         }
         
         &__input {
@@ -192,6 +193,9 @@
         &__count {
                 
         @media (min-width: 768px) {
+                position: absolute;
+                right: 198px;
+                
                 &::before {
                         content: "|";
                         margin-right: 10px;

@@ -44,7 +44,7 @@
         }
     }
     
-    &__contacts {
+    &__social-contacts {
         display: none;
         text-align: right;
         text-transform: capitalize;
@@ -101,6 +101,10 @@
         
         @media (min-width: 768px) {
             display: block;
+            
+        @media (min-width: 1000px) and (max-width: 1727px) {
+            scale: 1.2;
+        }
         }
         
         &--showed {
@@ -115,7 +119,7 @@
             0px 46px 39px 0px #00000011,
             0px 100px 85px 0px #00000017;
             
-            .header__contacts {
+            .header__social-contacts {
                 display: block;
             }
             
@@ -223,7 +227,7 @@
 
         @media (min-width: 768px) {
             gap: 44px;
-            margin-left: 122px;
+            margin-left: auto;
         }
         
         @media (min-width: 1728px) {

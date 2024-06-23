@@ -11,7 +11,7 @@
         }
     }
     
-    &__list {
+    &__list, &__list-anim {
         @include clear-list;
         
         display: flex;
@@ -24,33 +24,19 @@
         animation-timing-function: linear;
         
         @media (min-width: 768px) {
-            margin: 44px 0px 44px -15px;
+            margin: 44px 0px 44px 0px;
             animation-duration: 15s;
         }
         
         @media (min-width: 1728px) {
+            justify-content: center;
             margin: 56px 0px 66px -15px;
             animation: none;
         }
     }
     
     &__list-anim {
-        @include clear-list;
-        
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        margin: 21px 0px;
-        animation-name: scrolling-marketplace;
-        animation-duration: 10s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        
-        @media (min-width: 768px) {
-            margin: 44px 0px 44px -15px;
-            animation-duration: 15s;
-        }
-        
+      
         @media (min-width: 1728px) {
             display: none;
         }
@@ -85,4 +71,6 @@
             transform: translateX(-100%);
         }
     }
+    
+
 }

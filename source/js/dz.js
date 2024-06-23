@@ -69,38 +69,20 @@ const flats = [
     }
   ];
   
-const projectMap = new Map();
+const Project = {}
+const result = []
 
 flats.forEach(flat => {
-  const projectId = flat.project.id;
-  if (!projectMap.has(projectId)) {
-    projectMap.set(projectId, { project: flat.project, flats: [] });
+  if (!Project[flat.project.id]) {
+    Project[flat.project.id] = {
+      id : flat.project.id,
+      name : flat.project.name,
+      flats : []
+    }
+    result.push(Project[flat.project.id])
   }
-
-  const { project, ...flatWithoutProject } = flat;
-  projectMap.get(projectId).flats.push(flatWithoutProject);
-});
-
-const groupedFlatsMap = Array.from(projectMap.values());
-
-// Сложность On
-
-
-const grouped = flats.reduce((acc, flat) => {
-  const projectId = flat.project.id;
-  
-  if (!acc[projectId]) {
-    acc[projectId] = { project: flat.project, flats: [] };
-  }
-  
-  const { project, ...flatWithoutProject } = flat;
-  acc[projectId].flats.push(flatWithoutProject);
-  
-  return acc;
-}, {});
-
-const groupedFlats = Object.values(grouped);
-
-console.log(groupedFlats);
+    
+  Project[flat.project.id].flats.push({ floor : flat.floor, rooms : flat.rooms});
+})
 
 // Сложность On
